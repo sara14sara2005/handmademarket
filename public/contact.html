@@ -211,14 +211,22 @@ async function sendArtisan(e){
 
     const form = e.target;
     const formData = new FormData(form);
+    const artisanSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    artisanName: String,
+    message: String,
+    createdAt: { type: Date, default: Date.now }
+});
 
+const ArtisanMessage = mongoose.model("ArtisanMessage", artisanSchema);
     const data = {
         name: formData.get("name")?.trim(),
         email: formData.get("email")?.trim(),
         artisanName: formData.get("artisanName")?.trim(),
         message: formData.get("message")?.trim()
     };
-
+    
     console.log("DEBUG DATA:", data);
 
     if(!data.name || !data.email || !data.message){

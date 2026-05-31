@@ -64,7 +64,16 @@ app.post("/contact-artisan", async (req, res) => {
     try {
         const data = req.body;
 
-        console.log("ARTISAN MESSAGE RECEIVED:", data);
+        const newMsg = new ArtisanMessage({
+            name: data.name,
+            email: data.email,
+            artisanName: data.artisanName,
+            message: data.message
+        });
+
+        await newMsg.save();
+
+        console.log("SAVED ARTISAN MESSAGE ✅");
 
         res.json({ success: true });
 

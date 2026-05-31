@@ -60,7 +60,19 @@ app.post("/order", async (req, res) => {
         res.status(500).json({ success: false, error: err.message });
     }
 });
+app.post("/contact-artisan", async (req, res) => {
+    try {
+        const data = req.body;
 
+        console.log("ARTISAN MESSAGE RECEIVED:", data);
+
+        res.json({ success: true });
+
+    } catch (err) {
+        console.log("ARTISAN ERROR ❌", err);
+        res.status(500).json({ success: false });
+    }
+});
 /* 📊 GET ORDERS */
 app.get("/orders", async (req, res) => {
     try {

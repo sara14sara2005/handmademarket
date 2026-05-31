@@ -32,17 +32,34 @@ app.post("/order", async (req, res) => {
     try {
         const data = req.body;
 
+        console.log("ORDER RECEIVED:", data);
+
         let total = 0;
-        data.cart.forEach(item => total += item.price);
+
+        if (data.cart && Array.isArray(data.cart)) {
+            data.cart.forEach(item => {
+                total += item.price || 0;
+            });
+        }
 
         const newOrder = new Order({
-            name: data.name,
-            phone: data.phone,
-            wilaya: data.wilaya,
-            delivery: data.delivery,
-            cart: data.cart,
-            total
+            name: data.name || "",
+            phone: data.phone || "",
+            wilaya: data.wilaya || "",
+            delivery: data.delivery || "",
+            cart: data.cart || [],
+            total: total
         });
+
+        await newOrder.save();
+
+        res.json({ success: true });
+
+    } catch (err) {
+        console.log("ORDER ERROR ❌", err);
+        res.status(500).json({ success: false, error: err.message });
+    }
+});
 
         await newOrder.save();
 

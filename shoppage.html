@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HandMade Shop</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    background:#af8f91;
+    color:#4a3f35;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+header h1{
+    font-family:'Playfair Display', serif;
+    font-size:30px;
+    color:#7a4e37;
+    letter-spacing:1px;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+/* LINKS */
+nav a{
+    text-decoration:none;
+    color:#4a3f35;
+    font-weight:600;
+    padding:10px 16px;
+    border-radius:30px;
+    transition:0.3s ease;
+    font-size:14px;
+}
+
+/* HOVER */
+nav a:hover{
+    background:#c27c59;
+    color:white;
+    transform:translateY(-2px);
+}
+
+/* CART */
+nav a[href="cart.html"]{
+    background:#4a3f35;
+    color:white;
+}
+
+nav a[href="cart.html"]:hover{
+    background:#2d241e;
+}
+
+/* TITLE */
+.shop-title{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.shop-title h2{
+    font-family:'Playfair Display', serif;
+    font-size:38px;
+    margin-bottom:10px;
+    color:white;
+}
+
+.shop-title p{
+    color:#f3e9e3;
+    font-size:17px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:20px;
+    padding:30px;
+}
+
+/* CARD */
+.card{
+    background:#f3f1ef;
+    border-radius:16px;
+    padding:12px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.card h3{
+    margin:12px 0 5px;
+    font-size:17px;
+}
+
+.card p{
+    margin-bottom:10px;
+    font-weight:bold;
+    color:#7a4e37;
+}
+
+/* BUTTON */
+button{
+    padding:10px 16px;
+    background:#c27c59;
+    border:none;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:600;
+}
+
+button:hover{
+    background:#a9653f;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#4a3f35;
+    color:white;
+    margin-top:30px;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:8px 14px;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>HandMade Market</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shoppage.html">Shop</a>
+
+        <a href="jawlery_products.html">Jewelry</a>
+        <a href="homedecore_products.html">Homedecore</a>
+        <a href="pottery_products.html">Pottery</a>
+        <a href="embroidery_products.html">Embroidery</a>
+        <a href="decorativebasket_products.html">Basket</a>
+        <a href="ceramic_products.html">Ceramic</a>
+        <a href="silverart_products.html">Silver</a>
+        <a href="wooden_work.html">Wooden</a>
+        <a href="sahara_products.html">Sahara</a>
+        <a href="east_products.html">East</a>
+        <a href="west_products.html">West</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+
+</header>
+
+<section class="shop-title">
+    <h2>All Handmade Products</h2>
+    <p>Wood • Jewelry • Pottery • Decor • Silver</p>
+</section>
+
+<!-- PRODUCTS GRID -->
+<section class="grid">
+
+    <!-- ORIGINAL SHOP -->
+    <div class="card"><img src="i1.jpg"><h3>Embroidery</h3><p>3000Da</p><button>Add</button></div>
+    <div class="card"><img src="wood.jpg"><h3>Wood Crafts</h3><p>4500DA</p><button>Add</button></div>
+    <div class="card"><img src="brclt.jpg"><h3>Jewelry</h3><p>2500DA</p><button>Add</button></div>
+    <div class="card"><img src="basket.jpg"><h3>Baskets</h3><p>2000Da</p><button>Add</button></div>
+
+    <div class="card"><img src="pott.jpg"><h3>Pottery</h3><p>2000DA</p><button>Add</button></div>
+    <div class="card"><img src="d1.jpg"><h3>Decor</h3><p>2000DA</p><button>Add</button></div>
+    <div class="card"><img src="t1.jpg"><h3>Traditional Art</h3><p>20$</p><button>Add</button></div>
+    <div class="card"><img src="s1.jpg"><h3>Silver Art</h3><p>20$</p><button>Add</button></div>
+
+    <div class="card"><img src="c1.jpg"><h3>Ceramic</h3><p>2000DA</p><button>Add</button></div>
+    <div class="card"><img src="l1.jpg"><h3>Leather</h3><p>2000DA</p><button>Add</button></div>
+
+    <!-- WOOD -->
+    <div class="card"><img src="wooden_work1.jpeg"><h3>Wood Tray</h3><p>2500 DA</p><button>Add</button></div>
+    <div class="card"><img src="wooden_work2.jpeg"><h3>Wood Frame</h3><p>3000 DA</p><button>Add</button></div>
+    <div class="card"><img src="wooden_work3.jpeg"><h3>Box</h3><p>1800 DA</p><button>Add</button></div>
+    <div class="card"><img src="wooden_work4.jpeg"><h3>Candle Holder</h3><p>2200 DA</p><button>Add</button></div>
+
+    <!-- JEWELRY -->
+    <div class="card"><img src="jawlery_products1.png"><h3>Necklace</h3><p>4500 DA</p><button>Add</button></div>
+    <div class="card"><img src="jawlery_products6.jpeg"><h3>Anklet</h3><p>1200 DA</p><button>Add</button></div>
+    <div class="card"><img src="jawlery_products9.jpeg"><h3>Pendant</h3><p>3000 DA</p><button>Add</button></div>
+    <div class="card"><img src="jawlery_products15.jpeg"><h3>Earrings</h3><p>6000 DA</p><button>Add</button></div>
+
+    <!-- POTTERY -->
+    <div class="card"><img src="pottery_products1.jpeg"><h3>Vase</h3><p>2800 DA</p><button>Add</button></div>
+    <div class="card"><img src="pottery_products2.jpeg"><h3>Bowl Set</h3><p>3200 DA</p><button>Add</button></div>
+    <div class="card"><img src="pottery_products5.jpeg"><h3>Plate</h3><p>1800 DA</p><button>Add</button></div>
+    <div class="card"><img src="pottery_products8.jpeg"><h3>Storage Jar</h3><p>4000 DA</p><button>Add</button></div>
+
+    <!-- SILVER -->
+    <div class="card"><img src="silverart_products1.jpeg"><h3>Silver Necklace</h3><p>6500 DA</p><button>Add</button></div>
+    <div class="card"><img src="silverart_products3.jpeg"><h3>Ring</h3><p>3000 DA</p><button>Add</button></div>
+    <div class="card"><img src="silverart_products4.jpeg"><h3>Earrings</h3><p>3500 DA</p><button>Add</button></div>
+    <div class="card"><img src="silverart_products8.jpeg"><h3>Set</h3><p>20000 DA</p><button>Add</button></div>
+
+</section>
+
+<footer>
+    <p>© 2026 HandMade Market</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function updateCartText() {
+
+        let links = document.querySelectorAll('a[href="cart.html"]');
+
+        links.forEach(link => {
+            link.innerText = `Cart (${cart.length})`;
+        });
+    }
+
+    document.querySelectorAll('.card button').forEach(btn => {
+
+        btn.addEventListener('click', function () {
+
+            let card = this.closest('.card');
+
+            let img = card.querySelector('img').src;
+
+            let name = card.querySelector('h3').innerText;
+
+            let priceText = card.querySelector('p').innerText;
+
+            let price = parseInt(priceText.replace(/[^0-9]/g, ''));
+
+            cart.push({
+                name: name,
+                price: price,
+                img: img
+            });
+
+            saveCart();
+
+            updateCartText();
+
+            alert(name + " added to cart!");
+        });
+    });
+
+    updateCartText();
+
+});
+</script>
+
+</body>
+</html> 

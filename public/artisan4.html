@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wassila Amrany</title>
+<title>Nwaysar Alal</title>
 
 <style>
 body{
@@ -20,6 +20,7 @@ body{
     color:#f5efe6;
     font-size:24px;
     font-weight:bold;
+    letter-spacing:1px;
 }
 
 /* PROFILE */
@@ -122,6 +123,7 @@ body{
     padding:20px;
 }
 
+/* CARD */
 .card{
     background:#f5efe6;
     border-radius:12px;
@@ -190,30 +192,30 @@ button:hover{
 
 <div class="profile">
 
-    <img src="wassila.jpg" class="profile-img" alt="Wassila Amrany">
+    <img src="images/nwaysar.jpg" class="profile-img" alt="Nwaysar Alal">
 
     <div class="info">
 
-        <h2>Wassila Amrany</h2>
-        <div class="arabic">وسيلة عمراني</div>
+        <h2>Nwaysar Alal</h2>
+        <div class="arabic">نويسر علال</div>
 
-        <div class="category">Jewelry Handmade</div>
+        <div class="category">🪵 Woodwork</div>
 
         <div class="desc">
-            Home-based artisan specialized in handmade jewelry, creating elegant and unique pieces crafted with care and creativity.
+            Skilled artisan specialized in handmade woodwork, crafting decorative and practical wooden pieces with traditional Algerian touch.
         </div>
 
-        <div class="badge">Home Artisan</div>
+        <div class="badge">Wood Artisan</div>
 
-        <div class="location">📍 Blida, Algeria</div>
+        <div class="location">📍 Biskra, Algeria</div>
 
         <div class="contact">
-            <a href="tel:0562470130">📞 0562470130</a>
-            <a href="https://wa.me/213562470130">💬 WhatsApp</a>
+            <a href="#">📞 Call</a>
+            <a href="#">💬 WhatsApp</a>
         </div>
 
         <div class="map">
-            <iframe src="https://www.google.com/maps?q=Blida+Algeria&output=embed"></iframe>
+            <iframe src="https://www.google.com/maps?q=Biskra+Algeria&output=embed"></iframe>
         </div>
 
     </div>
@@ -222,42 +224,89 @@ button:hover{
 <div class="container">
 
 <div class="card">
-    <img src="j1.jpg">
+    <img src="images/w1.jpg">
     <div class="content">
-        <div class="title">Necklace</div>
+        <div class="title">Wooden Tray</div>
+        <div class="price">3200 DA</div>
+        <button>Add to Cart</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="images/w2.jpg">
+    <div class="content">
+        <div class="title">Decor Shelf</div>
+        <div class="price">4800 DA</div>
+        <button>Add to Cart</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="images/w3.jpg">
+    <div class="content">
+        <div class="title">Handmade Box</div>
+        <div class="price">2700 DA</div>
+        <button>Add to Cart</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="images/w4.jpg">
+    <div class="content">
+        <div class="title">Wooden Frame</div>
         <div class="price">2500 DA</div>
         <button>Add to Cart</button>
     </div>
 </div>
 
-<div class="card">
-    <img src="j2.jpg">
-    <div class="content">
-        <div class="title">Bracelet</div>
-        <div class="price">1800 DA</div>
-        <button>Add to Cart</button>
-    </div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-<div class="card">
-    <img src="j3.jpg">
-    <div class="content">
-        <div class="title">Earrings</div>
-        <div class="price">1500 DA</div>
-        <button>Add to Cart</button>
-    </div>
-</div>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-<div class="card">
-    <img src="j4.jpg">
-    <div class="content">
-        <div class="title">Ring</div>
-        <div class="price">1200 DA</div>
-        <button>Add to Cart</button>
-    </div>
-</div>
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
 
-</div>
+    function updateCartText() {
+        let links = document.querySelectorAll('a[href="cart.html"]');
 
+        links.forEach(link => {
+            link.innerText = `Cart (${cart.length})`;
+        });
+    }
+
+    document.querySelectorAll('.card .cart').forEach(btn => {
+        btn.addEventListener('click', function () {
+
+            let card = this.closest('.card');
+
+            let img = card.querySelector('img').src;
+
+            let nameEl = card.querySelector('.titlep') || card.querySelector('h3');
+            let name = nameEl ? nameEl.innerText : "Product";
+
+            let priceText = card.querySelector('.price')
+                ? card.querySelector('.price').innerText
+                : card.querySelector('p').innerText;
+
+            let price = parseInt(priceText.replace(/[^0-9]/g, ''));
+
+            cart.push({
+                name: name,
+                price: price,
+                img: img
+            });
+
+            saveCart();
+            updateCartText();
+        });
+    });
+
+    updateCartText();
+
+});
+</script>
 </body>
 </html>

@@ -187,7 +187,7 @@ button:hover{
 <!-- PROFILE -->
 <div class="profile">
 
-    <img src="walid.jpg" class="profile-img">
+    <img src="images/walid.jpg" class="profile-img">
 
     <div class="info">
 
@@ -222,7 +222,7 @@ button:hover{
 <div class="container">
 
 <div class="card">
-<img src="S1.jpg">
+<img src="images/S1.jpg">
 <div class="content">
 <div class="title">Engraved silver Box</div>
 <div class="price">5000 DA</div>
@@ -231,7 +231,7 @@ button:hover{
 </div>
 
 <div class="card">
-<img src="ss2.jpg">
+<img src="images/ss2.jpg">
 <div class="content">
 <div class="title">Cylindrical silver piece</div>
 <div class="price">8000 DA</div>
@@ -240,7 +240,7 @@ button:hover{
 </div>
 
 <div class="card">
-<img src="ss3.jpg">
+<img src="images/ss3.jpg">
 <div class="content">
 <div class="title">Decorative silver chest</div>
 <div class="price">3000 DA</div>
@@ -249,7 +249,7 @@ button:hover{
 </div>
 
 <div class="card">
-<img src="ss4.jpg">
+<img src="images/ss4.jpg">
 <div class="content">
 <div class="title">Handcrafted decorative piece</div>
 <div class="price">2500 DA</div>
@@ -258,6 +258,53 @@ button:hover{
 </div>
 
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function updateCartText() {
+        let links = document.querySelectorAll('a[href="cart.html"]');
+
+        links.forEach(link => {
+            link.innerText = `Cart (${cart.length})`;
+        });
+    }
+
+    document.querySelectorAll('.card .cart').forEach(btn => {
+        btn.addEventListener('click', function () {
+
+            let card = this.closest('.card');
+
+            let img = card.querySelector('img').src;
+
+            let nameEl = card.querySelector('.titlep') || card.querySelector('h3');
+            let name = nameEl ? nameEl.innerText : "Product";
+
+            let priceText = card.querySelector('.price')
+                ? card.querySelector('.price').innerText
+                : card.querySelector('p').innerText;
+
+            let price = parseInt(priceText.replace(/[^0-9]/g, ''));
+
+            cart.push({
+                name: name,
+                price: price,
+                img: img
+            });
+
+            saveCart();
+            updateCartText();
+        });
+    });
+
+    updateCartText();
+
+});
+</script>
 </body>
 </html>

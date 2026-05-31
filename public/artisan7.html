@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nwaysar Alal</title>
+<title>Manel Belhamri</title>
 
 <style>
 body{
@@ -13,17 +13,14 @@ body{
     color:#2e2e2e;
 }
 
-/* HEADER */
 .header{
     text-align:center;
     padding:30px;
     color:#f5efe6;
     font-size:24px;
     font-weight:bold;
-    letter-spacing:1px;
 }
 
-/* PROFILE */
 .profile{
     max-width:760px;
     margin:30px auto;
@@ -36,7 +33,6 @@ body{
     box-shadow:0 10px 30px rgba(0,0,0,0.35);
 }
 
-/* IMAGE */
 .profile-img{
     width:120px;
     height:120px;
@@ -45,7 +41,6 @@ body{
     border:3px solid #8b5e3c;
 }
 
-/* INFO */
 .info h2{
     margin:0;
     font-size:22px;
@@ -55,6 +50,12 @@ body{
     color:#8b5e3c;
     font-size:16px;
     margin-top:4px;
+}
+
+.shop{
+    font-size:14px;
+    color:#555;
+    margin-top:6px;
 }
 
 .category{
@@ -69,7 +70,6 @@ body{
     line-height:1.6;
 }
 
-/* BADGE */
 .badge{
     display:inline-block;
     background:#8b5e3c;
@@ -80,31 +80,12 @@ body{
     margin-top:10px;
 }
 
-/* LOCATION */
 .location{
     margin-top:12px;
     font-size:14px;
     color:#444;
 }
 
-/* CONTACT */
-.contact a{
-    display:inline-block;
-    margin-top:12px;
-    margin-right:10px;
-    padding:8px 15px;
-    background:#8b5e3c;
-    color:white;
-    border-radius:6px;
-    text-decoration:none;
-    font-size:13px;
-}
-
-.contact a:hover{
-    background:#6e452c;
-}
-
-/* MAP */
 .map iframe{
     width:100%;
     height:150px;
@@ -113,7 +94,6 @@ body{
     margin-top:12px;
 }
 
-/* PRODUCTS */
 .container{
     max-width:1000px;
     margin:20px auto;
@@ -123,7 +103,6 @@ body{
     padding:20px;
 }
 
-/* CARD */
 .card{
     background:#f5efe6;
     border-radius:12px;
@@ -172,7 +151,6 @@ button:hover{
     background:#6e452c;
 }
 
-/* RESPONSIVE */
 @media(max-width:800px){
     .profile{
         flex-direction:column;
@@ -192,30 +170,29 @@ button:hover{
 
 <div class="profile">
 
-    <img src="nwaysar.jpg" class="profile-img" alt="Nwaysar Alal">
+    <img src="images/manel.jpg" class="profile-img" alt="Manel Belhamri">
 
     <div class="info">
 
-        <h2>Nwaysar Alal</h2>
-        <div class="arabic">نويسر علال</div>
+        <h2>Manel Belhamri</h2>
+        <div class="arabic">منال بلحمري</div>
 
-        <div class="category">🪵 Woodwork</div>
+        <div class="shop">Shop: <strong>Manel CerArt</strong></div>
+
+        <div class="category">Ceramic Art</div>
 
         <div class="desc">
-            Skilled artisan specialized in handmade woodwork, crafting decorative and practical wooden pieces with traditional Algerian touch.
+            Ceramic artisan creating elegant handmade decorative pieces and practical ceramic objects inspired by Algerian craftsmanship.
         </div>
 
-        <div class="badge">Wood Artisan</div>
+        <div class="badge">Ceramic Artisan</div>
 
-        <div class="location">📍 Biskra, Algeria</div>
-
-        <div class="contact">
-            <a href="#">📞 Call</a>
-            <a href="#">💬 WhatsApp</a>
+        <div class="location">
+            📍 Hai Alyasmin, Oran, Algeria
         </div>
 
         <div class="map">
-            <iframe src="https://www.google.com/maps?q=Biskra+Algeria&output=embed"></iframe>
+            <iframe src="https://www.google.com/maps?q=Hai+Alyasmin+Oran+Algeria&output=embed"></iframe>
         </div>
 
     </div>
@@ -224,42 +201,90 @@ button:hover{
 <div class="container">
 
 <div class="card">
-    <img src="w1.jpg">
+    <img src="images/c1.jpg">
     <div class="content">
-        <div class="title">Wooden Tray</div>
-        <div class="price">3200 DA</div>
+        <div class="title">Ceramic Bowl</div>
+        <div class="price">2200 DA</div>
         <button>Add to Cart</button>
     </div>
 </div>
 
 <div class="card">
-    <img src="w2.jpg">
+    <img src="images/c2.jpg">
     <div class="content">
-        <div class="title">Decor Shelf</div>
-        <div class="price">4800 DA</div>
+        <div class="title">Decor Vase</div>
+        <div class="price">3400 DA</div>
         <button>Add to Cart</button>
     </div>
 </div>
 
 <div class="card">
-    <img src="w3.jpg">
+    <img src="images/c3.jpg">
     <div class="content">
-        <div class="title">Handmade Box</div>
-        <div class="price">2700 DA</div>
+        <div class="title">Handmade Cup</div>
+        <div class="price">1800 DA</div>
         <button>Add to Cart</button>
     </div>
 </div>
 
 <div class="card">
-    <img src="w4.jpg">
+    <img src="images/c4.jpg">
     <div class="content">
-        <div class="title">Wooden Frame</div>
-        <div class="price">2500 DA</div>
+        <div class="title">Ceramic Plate</div>
+        <div class="price">2600 DA</div>
         <button>Add to Cart</button>
     </div>
 </div>
 
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function updateCartText() {
+        let links = document.querySelectorAll('a[href="cart.html"]');
+
+        links.forEach(link => {
+            link.innerText = `Cart (${cart.length})`;
+        });
+    }
+
+    document.querySelectorAll('.card .cart').forEach(btn => {
+        btn.addEventListener('click', function () {
+
+            let card = this.closest('.card');
+
+            let img = card.querySelector('img').src;
+
+            let nameEl = card.querySelector('.titlep') || card.querySelector('h3');
+            let name = nameEl ? nameEl.innerText : "Product";
+
+            let priceText = card.querySelector('.price')
+                ? card.querySelector('.price').innerText
+                : card.querySelector('p').innerText;
+
+            let price = parseInt(priceText.replace(/[^0-9]/g, ''));
+
+            cart.push({
+                name: name,
+                price: price,
+                img: img
+            });
+
+            saveCart();
+            updateCartText();
+        });
+    });
+
+    updateCartText();
+
+});
+</script>
 
 </body>
 </html>

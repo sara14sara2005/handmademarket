@@ -62,7 +62,7 @@ app.get("/orders", async (req, res) => {
 
 /* 🏠 ROOT */
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"));
+    res.sendFile(path.join(__dirname, "public", "welcomepage.html"));
 });
 
 /* 🚀 START */

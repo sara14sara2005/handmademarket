@@ -68,6 +68,9 @@ app.get("/orders", async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+app.get("/", (req, res) => {
+    res.send("Handmade Market API is running 🚀");
+});
 
 /* 🏁 Start Server */
 app.listen(3000, () => {

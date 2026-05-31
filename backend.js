@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public")); // 👈 خليها هنا فقط مرة وحدة
+app.use(express.static("public"));
 
 /* 🔗 MongoDB connection */
 mongoose.connect("mongodb+srv://sara14sara2005_db_user:sarrasarra@cluster0.bf9frcj.mongodb.net/project_takharoj")
@@ -27,7 +27,7 @@ const orderSchema = new mongoose.Schema({
 
 const Order = mongoose.model("Order", orderSchema);
 
-/* 🟢 ORDER */
+/* 🟢 ORDER API */
 app.post("/order", async (req, res) => {
     try {
         const data = req.body;
@@ -36,7 +36,7 @@ app.post("/order", async (req, res) => {
 
         let total = 0;
 
-        if (data.cart && Array.isArray(data.cart)) {
+        if (Array.isArray(data.cart)) {
             data.cart.forEach(item => {
                 total += item.price || 0;
             });
@@ -61,27 +61,22 @@ app.post("/order", async (req, res) => {
     }
 });
 
-        await newOrder.save();
-
-        res.json({ success: true });
-
+/* 📊 GET ORDERS */
+app.get("/orders", async (req, res) => {
+    try {
+        const orders = await Order.find();
+        res.json(orders);
     } catch (err) {
-        console.log(err);
-        res.json({ success: false });
+        res.status(500).json({ error: err.message });
     }
 });
 
-/* 📊 GET ORDERS */
-app.get("/orders", async (req, res) => {
-    const orders = await Order.find();
-    res.json(orders);
-});
-
-/* 🏠 ROOT */
+/* 🏠 ROOT PAGE */
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "welcomepage.html"));
 });
 
+/* 🚀 START SERVER */
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

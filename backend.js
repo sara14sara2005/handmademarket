@@ -60,6 +60,15 @@ app.post("/order", async (req, res) => {
         res.status(500).json({ success: false, error: err.message });
     }
 });
+const artisanSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    artisanName: String,
+    message: String,
+    createdAt: { type: Date, default: Date.now }
+});
+
+const ArtisanMessage = mongoose.model("ArtisanMessage", artisanSchema);
 app.post("/contact-artisan", async (req, res) => {
     try {
         const data = req.body;

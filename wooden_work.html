@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handmade Market - Wood Work</title>
+
+<style>
+
+/* SAME THEME AS EMBROIDERY PAGE */
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #f6b26b, #8b5e3c);
+    margin: 0;
+}
+
+/* TITLE */
+.title {
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+/* GRID */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* IMAGE PLACEHOLDER */
+.img {
+    width: 100%;
+    height: 200px;
+    background: repeating-linear-gradient(
+        45deg,
+        #eee,
+        #eee 10px,
+        #f9f9f9 10px,
+        #f9f9f9 20px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 13px;
+}
+
+/* CONTENT */
+.content {
+    padding: 15px;
+}
+
+.tag {
+    font-size: 12px;
+    background: #8b5e3c;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.titlep {
+    margin: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.desc {
+    font-size: 13px;
+    color: #555;
+    min-height: 40px;
+}
+
+.artisan {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #8b5e3c;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.details {
+    background: #ddd;
+}
+
+.cart {
+    background: #8b5e3c;
+    color: white;
+}
+
+.cart:hover {
+    background: #6e452c;
+}
+
+.details:hover {
+    background: #ccc;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header style="display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:white;">
+    <h2>Handmade Market</h2>
+
+    <div>
+        <a href="projet.html">Home</a>
+        <a href="cart.html" style="margin-left:15px;">Cart</a>
+    </div>
+</header>
+<div class="container">
+
+<!-- 15 WOOD PRODUCTS -->
+
+<div class="card">
+<div class="img">
+  <img src="wooden_work1.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Handcrafted Wooden Tray</div>
+<div class="desc">Natural wood tray carefully carved and polished for daily home use or serving tea.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">2500 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="wooden_work2.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Rustic Wall Frame</div>
+<div class="desc">Decorative wooden frame designed for wall art and interior decoration with rustic finish.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">3000 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="wooden_work3.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Mini Storage Wooden Box</div>
+<div class="desc">Small handcrafted box used for jewelry, keys or personal storage with smooth finish.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">1800 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="wooden_work4.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Wooden Candle Holder</div>
+<div class="desc">Elegant candle holder made from natural oak wood for cozy home ambiance.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">2200 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="wooden_work5.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Cutting Kitchen Board</div>
+<div class="desc">Durable wooden cutting board designed for daily kitchen preparation and cooking.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">2700 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="wooden_work6.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Wood Spoon Set</div>
+<div class="desc">Set of handmade wooden spoons perfect for cooking and serving food naturally.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">1500 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="wooden_work7.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Wood Wall Clock</div>
+<div class="desc">Minimalist wooden wall clock designed for modern and elegant home decoration.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">3500 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="wooden_work8.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Jewelry Display Stand</div>
+<div class="desc">Wooden stand for organizing and displaying necklaces, rings and bracelets.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">2600 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="wooden_work9.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Mini Decorative Chair</div>
+<div class="desc">Small decorative wooden chair used for home decor or display purposes.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">4000 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="wooden_work10.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Rustic Table Decor</div>
+<div class="desc">Handmade rustic wood piece designed to decorate tables and living rooms.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">3200 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<<div class="img">
+  <img src="wooden_work11.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Wood Phone Stand</div>
+<div class="desc">Simple and practical wooden stand for holding phones and devices safely.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">1700 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="wooden_work12.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Carved Wall Art</div>
+<div class="desc">Traditional handcrafted wall art with detailed wood carving patterns.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">4500 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="wooden_work13.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Desk Pen Holder</div>
+<div class="desc">Wooden organizer for pens and office tools with clean design.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">1400 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="wooden_work14.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Luxury Wooden Box</div>
+<div class="desc">Premium handmade wooden box with smooth finishing and elegant design.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">5000 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="wooden_work15.jpeg" alt="Handmade Wood Product">
+</div>
+<div class="content">
+<span class="tag">Wood</span>
+<div class="titlep">Mirror Wooden Frame</div>
+<div class="desc">Decorative mirror frame carved from natural wood for home interiors.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">3800 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function updateCartText() {
+        let links = document.querySelectorAll('a[href="cart.html"]');
+
+        links.forEach(link => {
+            link.innerText = `Cart (${cart.length})`;
+        });
+    }
+
+    document.querySelectorAll('.card .cart').forEach(btn => {
+        btn.addEventListener('click', function () {
+
+            let card = this.closest('.card');
+
+            let img = card.querySelector('img').src;
+
+            let nameEl = card.querySelector('.titlep') || card.querySelector('h3');
+            let name = nameEl ? nameEl.innerText : "Product";
+
+            let priceText = card.querySelector('.price')
+                ? card.querySelector('.price').innerText
+                : card.querySelector('p').innerText;
+
+            let price = parseInt(priceText.replace(/[^0-9]/g, ''));
+
+            cart.push({
+                name: name,
+                price: price,
+                img: img
+            });
+
+            saveCart();
+            updateCartText();
+        });
+    });
+
+    updateCartText();
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marwa Bendderadji</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#3e2c23;
+    color:#2e2e2e;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:30px;
+    color:#f5efe6;
+    font-size:24px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+/* PROFILE CARD */
+.profile{
+    max-width:750px;
+    margin:30px auto;
+    background:#f5efe6;
+    border-radius:18px;
+    padding:25px;
+    display:flex;
+    gap:25px;
+    align-items:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* IMAGE */
+.profile-img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #8b5e3c;
+}
+
+/* INFO */
+.info h2{
+    margin:0;
+    font-size:22px;
+}
+
+.category{
+    color:#8b5e3c;
+    font-size:14px;
+    margin:5px 0;
+}
+
+.desc{
+    font-size:14px;
+    color:#555;
+    line-height:1.6;
+}
+
+/* BADGE */
+.badge{
+    display:inline-block;
+    background:#8b5e3c;
+    color:white;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+    margin-top:10px;
+}
+
+/* INSTAGRAM BUTTON */
+.insta{
+    display:inline-block;
+    margin-top:12px;
+    padding:9px 16px;
+    background:#222;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.insta:hover{
+    background:#444;
+}
+
+/* PRODUCTS */
+.container{
+    max-width:1000px;
+    margin:20px auto;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+    padding:20px;
+}
+
+/* CARD */
+.card{
+    background:#f5efe6;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* IMAGE */
+.card img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+}
+
+/* CONTENT */
+.content{
+    padding:12px;
+    text-align:center;
+}
+
+.title{
+    font-weight:600;
+    font-size:14px;
+}
+
+.price{
+    color:#8b5e3c;
+    font-weight:bold;
+    margin:5px 0;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:8px;
+    border:none;
+    background:#8b5e3c;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#6e452c;
+}
+
+/* RESPONSIVE */
+@media(max-width:800px){
+    .profile{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    Artisan Profile
+</div>
+
+<!-- PROFILE -->
+<div class="profile">
+
+    <img src="tohfa.jpg" class="profile-img">
+
+    <div class="info">
+
+        <h2>Marwa Bendderadji</h2>
+
+        <div class="category">🧺 Decorative Baskets</div>
+
+        <div class="desc">
+            Online artisan specialized in handmade decorative baskets.  
+            Each piece is crafted with care, combining tradition and modern design.
+        </div>
+
+        <div class="badge">Online Artisan</div>
+
+        <br>
+
+        <a class="insta" href="https://www.instagram.com/tohfa_by_bm" target="_blank">
+            📸 Visit Instagram
+        </a>
+
+    </div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="container">
+
+<div class="card">
+<img src="b11.jpg">
+<div class="content">
+<div class="title">Basket 1</div>
+<div class="price">2000 DA</div>
+<button>Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="B2.jpg">
+<div class="content">
+<div class="title">Basket 2</div>
+<div class="price">2500 DA</div>
+<button>Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="B3.jpg">
+<div class="content">
+<div class="title">Basket 3</div>
+<div class="price">1800 DA</div>
+<button>Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="B4.jpg">
+<div class="content">
+<div class="title">Basket 4</div>
+<div class="price">2200 DA</div>
+<button>Add to Cart</button>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

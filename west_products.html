@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>West Algeria Handmade Collection</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #b98a6a, #5c3b2e);
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:30px;
+    color:white;
+}
+
+/* GRID */
+.container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* IMAGE */
+.img{
+    width:100%;
+    height:200px;
+}
+
+.img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* CONTENT */
+.content{
+    padding:15px;
+}
+
+.tag{
+    font-size:12px;
+    background:#5c3b2e;
+    color:white;
+    padding:4px 8px;
+    border-radius:5px;
+}
+
+.title{
+    font-size:16px;
+    font-weight:bold;
+    margin:8px 0;
+}
+
+.desc{
+    font-size:13px;
+    color:#555;
+    min-height:40px;
+}
+
+.artisan{
+    font-size:12px;
+    color:#888;
+}
+
+.price{
+    font-weight:bold;
+    color:#5c3b2e;
+    margin-top:5px;
+}
+
+/* BUTTONS */
+.buttons{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+button{
+    flex:1;
+    padding:8px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:12px;
+}
+
+.details{
+    background:#ddd;
+}
+
+.cart{
+    background:#5c3b2e;
+    color:white;
+}
+
+.cart:hover{
+    background:#3f281f;
+}
+
+.details:hover{
+    background:#ccc;
+}
+
+</style>
+</head>
+
+<body>
+
+<header style="display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:white;">
+
+    <h2>West Algeria Collection</h2>
+
+    <div>
+        <a href="projet.html">Home</a>
+        <a href="cart.html" style="margin-left:15px;">Cart</a>
+    </div>
+
+</header>
+
+<div class="container">
+
+<!-- PRODUCT 1 -->
+<div class="card">
+<div class="img">
+<img src="west1.jpeg">
+</div>
+
+<div class="content">
+<span class="tag">West Algeria</span>
+
+<div class="title">Tlemcen Caftan</div>
+
+<div class="desc">
+Elegant traditional caftan from Tlemcen craftsmanship.
+</div>
+
+<div class="artisan">Artisan: Fatima Zohra</div>
+
+<div class="price">18000 DA</div>
+
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUCT 2 -->
+<div class="card">
+<div class="img">
+<img src="west2.jpeg">
+</div>
+
+<div class="content">
+<span class="tag">West Algeria</span>
+
+<div class="title">Oran Handmade Rug</div>
+
+<div class="desc">
+Traditional western Algerian woven rug with warm colors.
+</div>
+
+<div class="artisan">Artisan: Ahmed</div>
+
+<div class="price">9000 DA</div>
+
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUCT 3 -->
+<div class="card">
+<div class="img">
+<img src="west3.jpeg">
+</div>
+
+<div class="content">
+<span class="tag">West Algeria</span>
+
+<div class="title">Ceramic Plate Set</div>
+
+<div class="desc">
+Hand-painted ceramic plates inspired by Oran art.
+</div>
+
+<div class="artisan">Artisan: Samira</div>
+
+<div class="price">3200 DA</div>
+
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUCT 4 -->
+<div class="card">
+<div class="img">
+<img src="west4.jpeg">
+</div>
+
+<div class="content">
+<span class="tag">West Algeria</span>
+
+<div class="title">Leather Bag</div>
+
+<div class="desc">
+Handmade leather bag with western Algerian style.
+</div>
+
+<div class="artisan">Artisan: Yacine</div>
+
+<div class="price">7500 DA</div>
+
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUCT 5 -->
+<div class="card">
+<div class="img">
+<img src="west5.jpeg">
+</div>
+
+<div class="content">
+<span class="tag">West Algeria</span>
+
+<div class="title">Wooden Decor Set</div>
+
+<div class="desc">
+Handcrafted wooden decoration pieces for home styling.
+</div>
+
+<div class="artisan">Artisan: Ali</div>
+
+<div class="price">4500 DA</div>
+
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUCT 6 -->
+<div class="card">
+<div class="img">
+<img src="west6.jpeg">
+</div>
+
+<div class="content">
+<span class="tag">West Algeria</span>
+
+<div class="title">Silver Bracelet</div>
+
+<div class="desc">
+Traditional silver bracelet inspired by western Algerian heritage.
+</div>
+
+<div class="artisan">Artisan: Nadia</div>
+
+<div class="price">6000 DA</div>
+
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function updateCartText() {
+
+        let links = document.querySelectorAll('a[href="cart.html"]');
+
+        links.forEach(link => {
+            link.innerText = `Cart (${cart.length})`;
+        });
+    }
+
+    document.querySelectorAll('.card .cart').forEach(btn => {
+
+        btn.addEventListener('click', function () {
+
+            let card = this.closest('.card');
+
+            let img = card.querySelector('img').src;
+
+            let name = card.querySelector('.title').innerText;
+
+            let priceText = card.querySelector('.price').innerText;
+
+            let price = parseInt(priceText.replace(/[^0-9]/g, ''));
+
+            cart.push({
+                name: name,
+                price: price,
+                img: img
+            });
+
+            saveCart();
+            updateCartText();
+
+            alert(name + " added to cart!");
+        });
+    });
+
+    updateCartText();
+
+});
+
+</script>
+
+</body>
+</html>

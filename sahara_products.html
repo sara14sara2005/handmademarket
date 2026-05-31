@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahara Handmade Collection</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #d8a45d, #8b5e3c);
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:30px;
+    color:white;
+}
+
+/* GRID */
+.container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* IMAGE */
+.img{
+    width:100%;
+    height:200px;
+}
+
+.img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* CONTENT */
+.content{
+    padding:15px;
+}
+
+.tag{
+    font-size:12px;
+    background:#8b5e3c;
+    color:white;
+    padding:4px 8px;
+    border-radius:5px;
+}
+
+.title{
+    font-size:16px;
+    font-weight:bold;
+    margin:8px 0;
+}
+
+.desc{
+    font-size:13px;
+    color:#555;
+    min-height:40px;
+}
+
+.artisan{
+    font-size:12px;
+    color:#888;
+}
+
+.price{
+    font-weight:bold;
+    color:#8b5e3c;
+    margin-top:5px;
+}
+
+/* BUTTONS */
+.buttons{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+button{
+    flex:1;
+    padding:8px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:12px;
+}
+
+.details{ background:#ddd; }
+
+.cart{
+    background:#8b5e3c;
+    color:white;
+}
+
+.cart:hover{
+    background:#6e452c;
+}
+
+.details:hover{
+    background:#ccc;
+}
+
+</style>
+</head>
+
+<body>
+
+<header style="display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:white;">
+    
+    <h2>Sahara Collection</h2>
+
+    <div>
+        <a href="projet.html">Home</a>
+        <a href="cart.html" style="margin-left:15px;">Cart</a>
+    </div>
+
+</header>
+
+<div class="container">
+
+<!-- PRODUCT 1 -->
+<div class="card">
+<div class="img">
+<img src="sahara1.jpeg">
+</div>
+
+<div class="content">
+<span class="tag">Sahara</span>
+
+<div class="title">Touareg Necklace</div>
+
+<div class="desc">
+Traditional Touareg silver necklace handmade in the Algerian Sahara.
+</div>
+
+<div class="artisan">Artisan: Ahmed</div>
+
+<div class="price">5500 DA</div>
+
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUCT 2 -->
+<div class="card">
+<div class="img">
+<img src="sahara2.jpeg">
+</div>
+
+<div class="content">
+<span class="tag">Sahara</span>
+
+<div class="title">Saharan Carpet</div>
+
+<div class="desc">
+Handwoven desert carpet with traditional Saharan patterns.
+</div>
+
+<div class="artisan">Artisan: Fatima</div>
+
+<div class="price">12000 DA</div>
+
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUCT 3 -->
+<div class="card">
+<div class="img">
+<img src="sahara3.jpeg">
+</div>
+
+<div class="content">
+<span class="tag">Sahara</span>
+
+<div class="title">Clay Water Pot</div>
+
+<div class="desc">
+Traditional handmade clay pot used to keep water fresh.
+</div>
+
+<div class="artisan">Artisan: Ali</div>
+
+<div class="price">3500 DA</div>
+
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUCT 4 -->
+<div class="card">
+<div class="img">
+<img src="sahara4.jpeg">
+</div>
+
+<div class="content">
+<span class="tag">Sahara</span>
+
+<div class="title">Desert Basket</div>
+
+<div class="desc">
+Natural handmade basket crafted with palm leaves.
+</div>
+
+<div class="artisan">Artisan: Khadidja</div>
+
+<div class="price">2200 DA</div>
+
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUCT 5 -->
+<div class="card">
+<div class="img">
+<img src="sahara5.jpeg">
+</div>
+
+<div class="content">
+<span class="tag">Sahara</span>
+
+<div class="title">Touareg Bracelet</div>
+
+<div class="desc">
+Elegant handmade bracelet inspired by desert culture.
+</div>
+
+<div class="artisan">Artisan: Yacine</div>
+
+<div class="price">4800 DA</div>
+
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<!-- PRODUCT 6 -->
+<div class="card">
+<div class="img">
+<img src="sahara6.jpeg">
+</div>
+
+<div class="content">
+<span class="tag">Sahara</span>
+
+<div class="title">Leather Bag</div>
+
+<div class="desc">
+Handcrafted leather bag with Saharan handmade touches.
+</div>
+
+<div class="artisan">Artisan: Samira</div>
+
+<div class="price">9000 DA</div>
+
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function updateCartText() {
+
+        let links = document.querySelectorAll('a[href="cart.html"]');
+
+        links.forEach(link => {
+            link.innerText = `Cart (${cart.length})`;
+        });
+    }
+
+    document.querySelectorAll('.card .cart').forEach(btn => {
+
+        btn.addEventListener('click', function () {
+
+            let card = this.closest('.card');
+
+            let img = card.querySelector('img').src;
+
+            let name = card.querySelector('.title').innerText;
+
+            let priceText = card.querySelector('.price').innerText;
+
+            let price = parseInt(priceText.replace(/[^0-9]/g, ''));
+
+            cart.push({
+                name: name,
+                price: price,
+                img: img
+            });
+
+            saveCart();
+
+            updateCartText();
+
+            alert(name + " added to cart!");
+        });
+    });
+
+    updateCartText();
+
+});
+
+</script>
+
+</body>
+</html>

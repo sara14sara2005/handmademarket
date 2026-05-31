@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handmade Pottery Collection</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #f6b26b, #8b5e3c);
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:30px;
+    color:white;
+}
+
+/* GRID */
+.container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* IMAGE PLACEHOLDER */
+.img{
+    width:100%;
+    height:200px;
+    background: repeating-linear-gradient(
+        45deg,
+        #eee,
+        #eee 10px,
+        #f9f9f9 10px,
+        #f9f9f9 20px
+    );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#777;
+    font-size:13px;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* CONTENT */
+.content{
+    padding:15px;
+}
+
+.tag{
+    font-size:12px;
+    background:#8b5e3c;
+    color:white;
+    padding:4px 8px;
+    border-radius:5px;
+}
+
+.title{
+    font-size:16px;
+    font-weight:bold;
+    margin:8px 0;
+}
+
+.desc{
+    font-size:13px;
+    color:#555;
+    min-height:40px;
+}
+
+.artisan{
+    font-size:12px;
+    color:#888;
+}
+
+.price{
+    font-weight:bold;
+    color:#8b5e3c;
+    margin-top:5px;
+}
+
+/* BUTTONS */
+.buttons{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+button{
+    flex:1;
+    padding:8px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:12px;
+}
+.details{
+    flex:1;
+    padding:8px;
+    border-radius:6px;
+    background:#ddd;
+    text-decoration:none;
+    color:black;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+}
+
+.details:hover{
+    background:#ccc;
+}
+
+.details{ background:#ddd; }
+.cart{ background:#8b5e3c; color:white; }
+
+.cart:hover{ background:#6e452c; }
+.details:hover{ background:#ccc; }
+
+</style>
+</head>
+
+<body>
+
+
+<header style="display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:white;">
+    <h2>Handmade Market</h2>
+
+    <div>
+        <a href="projet.html">Home</a>
+        <a href="cart.html" style="margin-left:15px;">Cart</a>
+    </div>
+</header>
+<div class="container">
+
+<!-- 15 POTTERY PRODUCTS -->
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products1.jpeg" alt="Handmade Jewelry">
+  
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Traditional Clay Vase</div>
+<div class="desc">Handmade clay vase with natural finishing for home decoration.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2800 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products2.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Ceramic Bowl Set</div>
+<div class="desc">Set of handcrafted ceramic bowls for daily kitchen use.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">3200 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products3.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Mini Flower Pot</div>
+<div class="desc">Small clay pot perfect for indoor plants and decoration.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">1500 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products4.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Decorative Jug</div>
+<div class="desc">Traditional pottery jug inspired by Algerian handmade art.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">3000 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products5.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Rustic Clay Plate</div>
+<div class="desc">Handmade clay plate with rustic natural texture.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">1800 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products6.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Tea Pot Ceramic</div>
+<div class="desc">Elegant ceramic teapot designed for daily use and serving tea.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">3500 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products7.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Handmade Cup Set</div>
+<div class="desc">Set of ceramic cups with smooth handmade finishing.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2600 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products8.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Large Storage Jar</div>
+<div class="desc">Big clay jar used for storing grains and kitchen items.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">4000 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products9.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Hand Painted Vase</div>
+<div class="desc">Decorative vase painted with traditional handmade patterns.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">4500 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products10.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Clay Oil Lamp</div>
+<div class="desc">Traditional oil lamp made from natural clay material.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2000 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products11.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Modern Ceramic Bowl</div>
+<div class="desc">Minimal modern ceramic bowl for stylish kitchens.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2900 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products12.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Clay Serving Dish</div>
+<div class="desc">Handmade dish ideal for serving traditional meals.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2700 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products13.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Small Clay Cup</div>
+<div class="desc">Simple handmade clay cup for everyday drinking.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">1200 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products14.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Rustic Pot Set</div>
+<div class="desc">Set of rustic pots designed for traditional cooking style.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">5000 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="pottery_products15.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Pottery</span>
+<div class="title">Decor Clay Bowl</div>
+<div class="desc">Elegant decorative bowl for home interior styling.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2300 DA</div>
+<div class="buttons">
+<a href="artisan1.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function updateCartText() {
+        let links = document.querySelectorAll('a[href="cart.html"]');
+
+        links.forEach(link => {
+            link.innerText = `Cart (${cart.length})`;
+        });
+    }
+
+    document.querySelectorAll('.card .cart').forEach(btn => {
+        btn.addEventListener('click', function () {
+
+            let card = this.closest('.card');
+
+            let img = card.querySelector('img').src;
+
+            let nameEl = card.querySelector('.titlep') || card.querySelector('h3');
+            let name = nameEl ? nameEl.innerText : "Product";
+
+            let priceText = card.querySelector('.price')
+                ? card.querySelector('.price').innerText
+                : card.querySelector('p').innerText;
+
+            let price = parseInt(priceText.replace(/[^0-9]/g, ''));
+
+            cart.push({
+                name: name,
+                price: price,
+                img: img
+            });
+
+            saveCart();
+            updateCartText();
+        });
+    });
+
+    updateCartText();
+
+});
+</script>
+</body>
+</html> 

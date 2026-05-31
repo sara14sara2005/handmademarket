@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome - Hand Made Market</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("photo1.jpg") center/cover no-repeat;
+    position: relative;
+    color: white;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+/* CONTENT */
+.content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* LOGO IMAGE */
+.logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%; /* دائرة */
+    margin-bottom: 20px;
+    border: 3px solid #fff;
+    animation: zoomIn 1.5s ease;
+}
+
+/* TITLE */
+.content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    margin-bottom: 20px;
+ 
+}
+
+/* TEXT */
+.content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    color: #ae8f81;
+}
+
+/* BUTTON */
+.content button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    background: #8B5E3C;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.content button:hover {
+    background: #6f472d;
+    transform: scale(1.05);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="content">
+
+    <!-- 📸 PLACE FOR YOUR LOGO IMAGE -->
+    <div class="logo">
+        <img src="photo3.png" alt="logo">
+        <!-- بدل logo.png بالصورة تاعك -->
+    </div>
+
+    <h1>Hand Made Market</h1>
+
+    <p>
+    Where every handmade piece tells a story of passion, creativity, and tradition,
+    crafted with care to bring warmth, beauty, and authenticity into your everyday life.
+    </p>
+
+    <button onclick="window.location.href='projet.html'">Enter Home</button>
+
+</div>
+
+</body>
+</html>

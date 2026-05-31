@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handmade Decorative Baskets</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #f6b26b, #8b5e3c);
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:30px;
+    color:white;
+}
+
+/* GRID */
+.container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* IMAGE PLACEHOLDER */
+.img{
+    width:100%;
+    height:200px;
+    background: repeating-linear-gradient(
+        45deg,
+        #eee,
+        #eee 10px,
+        #f9f9f9 10px,
+        #f9f9f9 20px
+    );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#777;
+    font-size:13px;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* CONTENT */
+.content{
+    padding:15px;
+}
+
+.tag{
+    font-size:12px;
+    background:#8b5e3c;
+    color:white;
+    padding:4px 8px;
+    border-radius:5px;
+}
+
+.title{
+    font-size:16px;
+    font-weight:bold;
+    margin:8px 0;
+}
+
+.desc{
+    font-size:13px;
+    color:#555;
+    min-height:40px;
+}
+
+.artisan{
+    font-size:12px;
+    color:#888;
+}
+
+.price{
+    font-weight:bold;
+    color:#8b5e3c;
+    margin-top:5px;
+}
+
+/* BUTTONS */
+.buttons{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+button{
+    flex:1;
+    padding:8px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:12px;
+}
+.details{
+    flex:1;
+    padding:8px;
+    border-radius:6px;
+    background:#ddd;
+    text-decoration:none;
+    color:black;
+    text-align:center;
+    font-size:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.details:hover{
+    background:#ccc;
+}
+.details{ background:#ddd; }
+.cart{ background:#8b5e3c; color:white; }
+
+.cart:hover{ background:#6e452c; }
+.details:hover{ background:#ccc; }
+
+</style>
+</head>
+
+<body>
+<header style="display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:white;">
+    <h2>Handmade Decorative Baskets</h2>
+
+    <div>
+        <a href="projet.html">Home</a>
+        <a href="cart.html" style="margin-left:15px;">Cart</a>
+    </div>
+</header>
+
+
+<div class="container">
+
+<!-- 15 BASKETS PRODUCTS -->
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products1.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Natural Storage Basket</div>
+<div class="desc">Handwoven basket made from natural straw for home storage and decoration.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">1800 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products2.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Round Boho Basket</div>
+<div class="desc">Stylish round basket with bohemian handmade design.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2200 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products3.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Wall Hanging Basket</div>
+<div class="desc">Decorative basket designed for wall decoration and aesthetic interior style.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2500 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products4.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Picnic Basket</div>
+<div class="desc">Durable handmade basket perfect for outdoor picnics and storage.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">3000 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products5.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Mini Storage Basket</div>
+<div class="desc">Small basket ideal for organizing small home items.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">1500 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products6.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Color Weave Basket</div>
+<div class="desc">Colorful woven basket with artistic handmade patterns.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2000 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products7.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Laundry Basket</div>
+<div class="desc">Strong and large basket designed for laundry storage.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">3500 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products8.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Rustic Rope Basket</div>
+<div class="desc">Natural rope basket with rustic handmade finish.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2400 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products9.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Kitchen Organizer Basket</div>
+<div class="desc">Useful basket for organizing kitchen items and fruits.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2100 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products10.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Boho Wall Basket Set</div>
+<div class="desc">Set of decorative baskets for stylish wall decoration.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">4000 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products11.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Storage Lid Basket</div>
+<div class="desc">Basket with lid for safe storage of personal items.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2800 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products12.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Fruit Display Basket</div>
+<div class="desc">Elegant basket for displaying fruits in kitchen or dining table.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2300 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products13.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Handmade Oval Basket</div>
+<div class="desc">Classic oval basket with strong handmade weaving.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">1900 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products14.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Decorative Gift Basket</div>
+<div class="desc">Perfect basket for gifts and special occasions decoration.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2600 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="decorativebasket_products15.jpeg" alt="Handwoven Basket">
+</div>
+<div class="content">
+<span class="tag">Basket</span>
+<div class="title">Premium Woven Basket</div>
+<div class="desc">High-quality handmade basket with fine finishing details.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">3200 DA</div>
+<div class="buttons">
+<a href="artisan2.html" class="details">View Details</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function updateCartText() {
+        let links = document.querySelectorAll('a[href="cart.html"]');
+
+        links.forEach(link => {
+            link.innerText = `Cart (${cart.length})`;
+        });
+    }
+
+    document.querySelectorAll('.card .cart').forEach(btn => {
+        btn.addEventListener('click', function () {
+
+            let card = this.closest('.card');
+
+            let img = card.querySelector('img').src;
+
+            let nameEl = card.querySelector('.titlep') || card.querySelector('h3');
+            let name = nameEl ? nameEl.innerText : "Product";
+
+            let priceText = card.querySelector('.price')
+                ? card.querySelector('.price').innerText
+                : card.querySelector('p').innerText;
+
+            let price = parseInt(priceText.replace(/[^0-9]/g, ''));
+
+            cart.push({
+                name: name,
+                price: price,
+                img: img
+            });
+
+            saveCart();
+            updateCartText();
+        });
+    });
+
+    updateCartText();
+
+});
+</script>
+</body>
+</html>

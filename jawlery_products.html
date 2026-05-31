@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handmade Jewelry Collection</title>
+
+<style>
+
+/* SAME BRAND STYLE */
+body {
+    font-family: Arial;
+    margin: 0;
+    background: linear-gradient(135deg, #f6b26b, #8b5e3c);
+}
+
+/* TITLE */
+.title {
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+/* GRID */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGE PLACEHOLDER */
+.img {
+    width: 100%;
+    height: 200px;
+    background: repeating-linear-gradient(
+        45deg,
+        #eee,
+        #eee 10px,
+        #f9f9f9 10px,
+        #f9f9f9 20px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 13px;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* CONTENT */
+.content {
+    padding: 15px;
+}
+
+.tag {
+    font-size: 12px;
+    background: #8b5e3c;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.titlep {
+    margin: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.desc {
+    font-size: 13px;
+    color: #555;
+    min-height: 40px;
+}
+
+.artisan {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #8b5e3c;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.details {
+    background: #ddd;
+}
+
+.cart {
+    background: #8b5e3c;
+    color: white;
+}
+
+.cart:hover {
+    background: #6e452c;
+}
+
+.details:hover {
+    background: #ccc;
+}
+
+
+.img video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+</style>
+</head>
+
+<body>
+<header style="display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:white;">
+    <h2>Handmade Jewelry Collection</h2>
+
+    <div>
+        <a href="projet.html">Home</a>
+        <a href="cart.html" style="margin-left:15px;">Cart</a>
+    </div>
+</header>
+
+
+<div class="container">
+
+<!-- 15 JEWELRY PRODUCTS -->
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products1.png" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Silver Elegant Necklace</div>
+<div class="desc">Handmade silver necklace with fine traditional design and polished finish.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">4500 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <video autoplay muted loop playsinline>
+    <source src="jawlery_products2.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Boho Bracelet Set</div>
+<div class="desc">Colorful handmade bracelet set inspired by bohemian style.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">1800 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <video autoplay muted loop playsinline>
+    <source src="jawlery_products3.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Traditional Ring Design</div>
+<div class="desc">Crafted ring with cultural handmade patterns and elegant finish.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">2200 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <video autoplay muted loop playsinline>
+    <source src="jawlery_products4.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Pearl Handmade Earrings</div>
+<div class="desc">Elegant earrings made with artificial pearls and fine detailing.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">2000 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <video autoplay muted loop playsinline>
+    <source src="jawlery_products5.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Gold-Plated Chain</div>
+<div class="desc">Simple and stylish gold-plated chain for everyday wear.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">5000 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products6.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Beaded Anklet</div>
+<div class="desc">Handmade colorful anklet with small decorative beads.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">1200 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products7.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Minimalist Silver Ring</div>
+<div class="desc">Clean and simple silver ring designed for modern style lovers.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">2500 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products8.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Luxury Bridal Set</div>
+<div class="desc">Elegant handmade jewelry set designed for special occasions.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">8000 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products9.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Stone Pendant Necklace</div>
+<div class="desc">Natural stone pendant with handmade metallic chain.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">3000 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products10.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Ethnic Handmade Bracelet</div>
+<div class="desc">Traditional ethnic bracelet inspired by cultural Algerian designs.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">1600 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products11.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Crystal Drop Earrings</div>
+<div class="desc">Shiny crystal earrings perfect for elegant outfits.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">2800 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products12.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Handmade Charm Bracelet</div>
+<div class="desc">Bracelet with small handmade charms and decorative elements.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">1900 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products13.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Vintage Style Necklace</div>
+<div class="desc">Old-style handmade necklace with antique look finish.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">3500 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products14.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Color Bead Necklace</div>
+<div class="desc">Bright colorful bead necklace handmade with care.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">1400 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products15.jpeg" alt="Handmade Jewelry">
+</div>
+<div class="content">
+<span class="tag">Jewelry</span>
+<div class="titlep">Luxury Gold Earrings</div>
+<div class="desc">Elegant gold-style earrings perfect for formal events.</div>
+<div class="artisan">Artisan: __________</div>
+<div class="price">6000 DA</div>
+<div class="buttons">
+<a href="artisan5.html">
+    <button class="details">View Details</button>
+</a>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function updateCartText() {
+        let links = document.querySelectorAll('a[href="cart.html"]');
+
+        links.forEach(link => {
+            link.innerText = `Cart (${cart.length})`;
+        });
+    }
+
+    document.querySelectorAll('.card .cart').forEach(btn => {
+        btn.addEventListener('click', function () {
+
+            let card = this.closest('.card');
+
+            let img = card.querySelector('img').src;
+
+            let nameEl = card.querySelector('.titlep') || card.querySelector('h3');
+            let name = nameEl ? nameEl.innerText : "Product";
+
+            let priceText = card.querySelector('.price')
+                ? card.querySelector('.price').innerText
+                : card.querySelector('p').innerText;
+
+            let price = parseInt(priceText.replace(/[^0-9]/g, ''));
+
+            cart.push({
+                name: name,
+                price: price,
+                img: img
+            });
+
+            saveCart();
+            updateCartText();
+        });
+    });
+
+    updateCartText();
+
+});
+</script>
+</body>
+</html>

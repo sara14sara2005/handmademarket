@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body{
+        margin:0;
+        font-family: 'Segoe UI', sans-serif;
+        background:#f5efe6;
+        color:#3b2f2f;
+    }
+
+    .container{
+        max-width:900px;
+        margin:60px auto;
+        padding:20px;
+        text-align:center;
+    }
+
+    h1{
+        margin-bottom:30px;
+        color:#5a3e36;
+    }
+
+    .choices{
+        display:flex;
+        gap:20px;
+        justify-content:center;
+        margin-bottom:40px;
+    }
+
+    .card{
+        flex:1;
+        background:#fff;
+        padding:25px;
+        border-radius:15px;
+        cursor:pointer;
+        box-shadow:0 6px 15px rgba(0,0,0,0.1);
+        transition:0.3s;
+        border:2px solid transparent;
+    }
+
+    .card:hover{
+        transform:translateY(-5px);
+        border-color:#a47148;
+    }
+
+    .card h2{
+        color:#7a4e3a;
+    }
+
+    .form-box{
+        display:none;
+        background:#fff;
+        padding:25px;
+        border-radius:15px;
+        box-shadow:0 6px 15px rgba(0,0,0,0.1);
+        text-align:left;
+        margin-top:20px;
+    }
+
+    input, textarea{
+        width:100%;
+        padding:12px;
+        margin:10px 0;
+        border:1px solid #ddd;
+        border-radius:8px;
+        outline:none;
+    }
+
+    input:focus, textarea:focus{
+        border-color:#a47148;
+    }
+
+    button{
+        width:100%;
+        padding:12px;
+        background:#a47148;
+        color:white;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        font-size:15px;
+        margin-top:10px;
+    }
+
+    button:hover{
+        background:#5a3e36;
+    }
+
+    .home-btn{
+        display:inline-block;
+        margin-bottom:20px;
+        padding:10px 18px;
+        background:#3b2f2f;
+        color:#fff;
+        text-decoration:none;
+        border-radius:8px;
+        transition:0.3s;
+        font-size:14px;
+    }
+
+    .home-btn:hover{
+        background:#a47148;
+        transform:translateY(-2px);
+    }
+
+    /* AI image preview */
+    #aiPreview{
+        width:100%;
+        max-width:300px;
+        margin-top:10px;
+        border-radius:10px;
+        display:none;
+    }
+
+    /* Canva button */
+    .canva-btn{
+        display:block;
+        margin-top:10px;
+        padding:12px;
+        background:#a47148;
+        color:white;
+        text-decoration:none;
+        border-radius:8px;
+        text-align:center;
+    }
+</style>
+</head>
+
+<body>
+
+<a href="projet.html" class="home-btn">🏠 Home</a>
+
+<div class="container">
+
+    <h1>Contact Us</h1>
+
+    <div class="choices">
+
+        <div class="card" onclick="showForm('order')">
+            <h2>🛍️ Custom Order</h2>
+            <p>Request personalized product</p>
+        </div>
+    </div>
+
+    <!-- ARTISAN FORM -->
+    <div id="artisan" class="form-box">
+        <h2>Talk to Artisan</h2>
+        <form action="/contact-artisan" method="POST">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="artisanName" placeholder="Artisan Name (optional)">
+            <textarea name="message" rows="5" placeholder="Write your message..."></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- ORDER FORM -->
+    <div id="order" class="form-box">
+        <h2>Custom Product Order</h2>
+
+        <form onsubmit="sendArtisan(event)">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="artisanName" placeholder="artisanName">
+            <textarea name="message"placeholder="Write your message..." required></textarea>
+
+            <textarea id="details" name="details" rows="5" placeholder="Describe your product..."></textarea>
+
+            <input type="file" name="image">
+
+            <!-- AI BUTTON -->
+            <button type="button" onclick="generateAI()">
+                🎨 Generate Design with AI
+            </button>
+
+            <img id="aiPreview">
+
+            <!-- Canva Button ADDED -->
+            <a href="https://www.canva.com/" target="_blank" class="canva-btn">
+                🎨 Create Design in Canva
+            </a>
+
+            <!-- hidden AI result -->
+            <input type="hidden" name="generatedImage" id="generatedImage">
+
+            <button type="submit">Submit Order</button>
+
+        </form>
+    </div>
+
+</div>
+
+<script>
+function showForm(id){
+    document.getElementById("artisan").style.display="none";
+    document.getElementById("order").style.display="none";
+    document.getElementById(id).style.display="block";
+}
+
+/* ================= ARTISAN SEND ================= */
+async function sendArtisan(e){
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const data = {
+        name: formData.get("name")?.trim(),
+        email: formData.get("email")?.trim(),
+        artisanName: formData.get("artisanName")?.trim(),
+        message: formData.get("message")?.trim()
+    };
+
+    console.log("DEBUG DATA:", data);
+
+    if(!data.name || !data.email || !data.message){
+        alert("Fill all required fields!");
+        return;
+    }
+
+    try {
+        const res = await fetch("http://localhost:3000/contact-artisan", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+
+        if(result.success){
+            alert("Message sent ✅");
+            form.reset();
+        } else {
+            alert("Error ❌");
+        }
+
+    } catch (err) {
+        console.log(err);
+        alert("Server not responding ❌");
+    }
+}
+
+/* ================= AI ================= */
+async function generateAI(){
+
+    let text = document.getElementById("details").value.trim();
+
+    if(!text){
+        alert("Write a description first!");
+        return;
+    }
+
+    document.getElementById("aiPreview").style.display="block";
+    document.getElementById("aiPreview").src = "https://i.imgur.com/6RMhx.gif";
+
+    try {
+        let res = await fetch("http://localhost:3000/generate", {
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify({ text })
+        });
+
+        let data = await res.json();
+
+        document.getElementById("aiPreview").src = data.image;
+        document.getElementById("generatedImage").value = data.image;
+
+    } catch (err) {
+        console.log(err);
+        alert("AI server not working");
+    }
+console.log([...new FormData(e.target).entries()]);
+}
+</script>
+
+</body>
+</html>

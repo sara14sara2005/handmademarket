@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart - Hand Made Market</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Montserrat', sans-serif; background: #f5efe6; color: #4a3f35; padding: 20px; }
+h1, h2 { font-family: 'Playfair Display', serif; text-align: center; margin-bottom: 20px; }
+
+.cart-items { display: flex; flex-direction: column; gap: 20px; margin-bottom: 40px; }
+.cart-item { display: flex; gap: 20px; background: white; padding: 15px; border-radius: 12px; align-items: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.cart-item img { width: 100px; height: 100px; object-fit: cover; border-radius: 10px; }
+.cart-item-details { flex: 1; }
+.cart-item-details h3 { margin-bottom: 5px; }
+.cart-item-details p { margin-bottom: 5px; font-weight: bold; }
+.cart-item button { margin-top: 5px; padding: 5px 10px; background: #c27c59; border: none; color: white; border-radius: 6px; cursor: pointer; }
+.cart-item button:hover { background: #a9653f; }
+
+.total { text-align: right; font-size: 20px; font-weight: bold; margin-bottom: 40px; }
+
+.checkout-form { background: white; padding: 20px; border-radius: 12px; max-width: 500px; margin: 0 auto; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.checkout-form h2 { text-align: center; margin-bottom: 20px; }
+.checkout-form label { display: block; margin-bottom: 5px; font-weight: bold; }
+.checkout-form input, .checkout-form select { width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc; }
+.checkout-form button { width: 100%; padding: 12px; background: #c27c59; border: none; color: white; border-radius: 8px; cursor: pointer; font-size: 16px; }
+.checkout-form button:hover { background: #a9653f; }
+
+.empty-cart, .thankyou { text-align: center; font-size: 18px; color: #555; margin-top: 50px; }
+</style>
+</head>
+<body>
+
+<h1>Your Cart</h1>
+
+<div class="cart-items" id="cart-items">
+  <!-- المنتجات المضافة تظهر هنا -->
+</div>
+
+<p class="total" id="cart-total">Total: $0</p>
+
+<div class="checkout-form" id="checkout-form">
+    <h2>Checkout Information</h2>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Your Name">
+
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" placeholder="Your Phone Number (10 digits)">
+
+    <label for="wilaya">Wilaya</label>
+    <select id="wilaya">
+        <option value="">-- Select Wilaya --</option>
+        <option value="Adrar">Adrar</option>
+        <option value="Chlef">Chlef</option>
+        <option value="Laghouat">Laghouat</option>
+        <option value="Oum El Bouaghi">Oum El Bouaghi</option>
+        <option value="Batna">Batna</option>
+        <option value="Béjaïa">Béjaïa</option>
+        <option value="Biskra">Biskra</option>
+        <option value="Béchar">Béchar</option>
+        <option value="Blida">Blida</option>
+        <option value="Bouira">Bouira</option>
+        <option value="Tamanrasset">Tamanrasset</option>
+        <option value="Tébessa">Tébessa</option>
+        <option value="Tlemcen">Tlemcen</option>
+        <option value="Tiaret">Tiaret</option>
+        <option value="Tizi Ouzou">Tizi Ouzou</option>
+        <option value="Algiers">Algiers</option>
+        <option value="Djelfa">Djelfa</option>
+        <option value="Jijel">Jijel</option>
+        <option value="Sétif">Sétif</option>
+        <option value="Saïda">Saïda</option>
+        <option value="Skikda">Skikda</option>
+        <option value="Sidi Bel Abbès">Sidi Bel Abbès</option>
+        <option value="Annaba">Annaba</option>
+        <option value="Guelma">Guelma</option>
+        <option value="Constantine">Constantine</option>
+        <option value="Médéa">Médéa</option>
+        <option value="Mostaganem">Mostaganem</option>
+        <option value="M'Sila">M'Sila</option>
+        <option value="Mascara">Mascara</option>
+        <option value="Ouargla">Ouargla</option>
+        <option value="Oran">Oran</option>
+        <option value="El Bayadh">El Bayadh</option>
+        <option value="Illizi">Illizi</option>
+        <option value="Bordj Bou Arreridj">Bordj Bou Arreridj</option>
+        <option value="Boumerdès">Boumerdès</option>
+        <option value="El Tarf">El Tarf</option>
+        <option value="Tindouf">Tindouf</option>
+        <option value="Tissemsilt">Tissemsilt</option>
+        <option value="El Oued">El Oued</option>
+        <option value="Khenchela">Khenchela</option>
+        <option value="Souk Ahras">Souk Ahras</option>
+        <option value="Tipaza">Tipaza</option>
+        <option value="Mila">Mila</option>
+        <option value="Aïn Defla">Aïn Defla</option>
+        <option value="Naâma">Naâma</option>
+        <option value="Aïn Témouchent">Aïn Témouchent</option>
+        <option value="Ghardaïa">Ghardaïa</option>
+        <option value="Relizane">Relizane</option>
+    </select>
+
+    <label>Delivery Type</label>
+    <select id="delivery">
+        <option value="">-- Select Delivery --</option>
+        <option value="Home">Home</option>
+        <option value="Office">Office</option>
+    </select>
+
+    <button onclick="checkout()">Confirm Purchase</button>
+</div>
+
+<div class="thankyou" id="thankyou" style="display:none;">
+    <h2>Thank you for your order!</h2>
+    <button onclick="goHome()">Back to Home</button>
+</div>
+
+<script>
+// جلب المنتجات من localStorage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cartItemsContainer = document.getElementById('cart-items');
+let cartTotalEl = document.getElementById('cart-total');
+
+function renderCart() {
+    cartItemsContainer.innerHTML = '';
+
+    if(cart.length === 0){
+        cartItemsContainer.innerHTML = `
+        <p class="empty-cart">Your cart is empty.</p>
+        <div style="text-align:center; margin-top:20px;">
+            <button onclick="goHome()" style="padding:10px 20px; background:#c27c59; color:white; border:none; border-radius:8px;">Back to Home</button>
+        </div>`;
+        cartTotalEl.innerText = 'Total: $0';
+        return;
+    }
+
+    let total = 0;
+
+    cart.forEach((item,index) => {
+        total += item.price;
+
+        let div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+            <img src="${item.img}">
+            <div class="cart-item-details">
+                <h3>${item.name}</h3>
+                <p>${item.price}DA</p>
+            </div>
+            <button onclick="removeItem(${index})">Remove</button>
+        `;
+        cartItemsContainer.appendChild(div);
+    });
+
+    cartTotalEl.innerText = `Total: ${total}DA`;
+}
+
+function removeItem(index){
+    cart.splice(index,1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+}
+
+function checkout(){
+
+    if(cart.length === 0){
+        alert("Cart is empty!");
+        return;
+    }
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let wilaya = document.getElementById("wilaya").value;
+    let delivery = document.getElementById("delivery").value;
+
+    if(!name || !phone || !wilaya || !delivery){
+        alert("Fill all fields!");
+        return;
+    }
+
+    fetch("http://localhost:3000/order", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name,
+            phone,
+            wilaya,
+            delivery,
+            cart
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+
+        if(data.success){
+            alert("Order saved successfully!");
+
+            localStorage.removeItem("cart");
+
+            window.location.href = "projet.html";
+        } else {
+            alert("Error saving order");
+        }
+    })
+    .catch(err => {
+        console.log(err);
+        alert("Server error");
+    });
+}
+
+// load page
+renderCart();
+// عند تحميل الصفحة
+
+</script>
+
+</body>
+</html>

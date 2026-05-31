@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HandMade - Shop</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #f6b26b, #8b5e3c);
+    color: #4a2f1b;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: linear-gradient(90deg, #d97706, #6b3e26);
+    color: white;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd8a8;
+}
+
+/* TITLE */
+.shop-title {
+    text-align: center;
+    padding: 40px;
+    color: #fff5eb;
+}
+
+.shop-title h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 40px;
+}
+
+/* CARD */
+.card {
+    background: #fffaf5;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* TEXT */
+.card p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #6b4f3a;
+}
+
+/* BUTTON */
+.card button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: linear-gradient(45deg, #f6b26b, #8b5e3c);
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: linear-gradient(45deg, #e89b4a, #5a3825);
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(90deg, #8b5e3c, #4a2f1b);
+    color: #fff5eb;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>TerraClay</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="shop-title">
+    <h2>Our Handmade Collection</h2>
+    <p>Explore our unique creations</p>
+</section>
+
+<section class="grid">
+
+    <div class="card">
+        <img src="i1.jfif">
+        <h3>Handmade Embroidery</h3>
+        <p>Delicate and unique handmade embroidery pieces</p>
+        <button>Explore Collection →</button>
+    </div>
+
+    <div class="card">
+        <img src="wood.jfif">
+        <h3>Wooden Crafts</h3>
+        <p>Elegant handmade wooden decorations</p>
+        <button>Explore Collection →</button>
+    </div>
+
+    <div class="card">
+        <img src="brclt.jfif">
+        <h3>Handmade Jewelry</h3>
+        <p>Beautiful artisanal jewelry designs</p>
+        <button>Explore Collection →</button>
+    </div>
+
+    <div class="card">
+        <img src="basket.jfif">
+        <h3>Decorative Baskets</h3>
+        <p>Handwoven baskets for stylish storage</p>
+        <button>Explore Collection →</button>
+    </div>
+
+    <div class="card">
+        <img src="pott.jfif">
+        <h3>Pottery</h3>
+        <p>Traditional clay pottery crafted with care</p>
+        <button>Explore Collection →</button>
+    </div>
+
+    <div class="card">
+        <img src="d1.jfif">
+        <h3>Home Decor</h3>
+        <p>Charming handmade decorations for your home</p>
+        <button>Explore Collection →</button>
+    </div>
+
+    <div class="card">
+        <img src="t1.jfif">
+        <h3>Traditional Art</h3>
+        <p>Authentic cultural and artistic creations</p>
+        <button>Explore Collection →</button>
+    </div>
+
+    <div class="card">
+        <img src="s1.jfif">
+        <h3>Silver Art</h3>
+        <p>Fine handcrafted silver pieces</p>
+        <button>Explore Collection →</button>
+    </div>
+
+    <div class="card">
+        <img src="c1.jfif">
+        <h3>Ceramic</h3>
+        <p>Modern and traditional ceramic items</p>
+        <button>Explore Collection →</button>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 TerraClay</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handmade Home Decor Collection</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #f6b26b, #8b5e3c);
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:30px;
+    color:white;
+}
+
+/* GRID */
+.container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* IMAGE PLACEHOLDER */
+.img{
+    width:100%;
+    height:200px;
+    background: repeating-linear-gradient(
+        45deg,
+        #eee,
+        #eee 10px,
+        #f9f9f9 10px,
+        #f9f9f9 20px
+    );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#777;
+    font-size:13px;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* CONTENT */
+.content{
+    padding:15px;
+}
+
+.tag{
+    font-size:12px;
+    background:#8b5e3c;
+    color:white;
+    padding:4px 8px;
+    border-radius:5px;
+}
+
+.title{
+    font-size:16px;
+    font-weight:bold;
+    margin:8px 0;
+}
+
+.desc{
+    font-size:13px;
+    color:#555;
+    min-height:40px;
+}
+
+.artisan{
+    font-size:12px;
+    color:#888;
+}
+
+.price{
+    font-weight:bold;
+    color:#8b5e3c;
+    margin-top:5px;
+}
+
+/* BUTTONS */
+.buttons{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+button{
+    flex:1;
+    padding:8px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:12px;
+}
+.img video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.details{ background:#ddd; }
+.cart{ background:#8b5e3c; color:white; }
+
+.cart:hover{ background:#6e452c; }
+.details:hover{ background:#ccc; }
+
+</style>
+</head>
+
+<body>
+<header style="display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:white;">
+    <h2>Handmade Home decor </h2>
+
+    <div>
+        <a href="projet.html">Home</a>
+        <a href="cart.html" style="margin-left:15px;">Cart</a>
+    </div>
+</header>
+
+<div class="container">
+
+<!-- 15 HOME DECOR PRODUCTS -->
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products17.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">Wall Hanging Macramé</div>
+<div class="desc">Handmade macramé wall art perfect for modern boho interiors.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">3200 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products18.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">Wood Candle Stand</div>
+<div class="desc">Elegant wooden candle holder for cozy home atmosphere.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2200 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products19.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">Decorative Mirror Frame</div>
+<div class="desc">Handcrafted wooden mirror frame with rustic finish.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">4000 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products20.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">Boho Wall Basket Set</div>
+<div class="desc">Set of woven baskets for stylish wall decoration.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">3500 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products21.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">Table Centerpiece Decor</div>
+<div class="desc">Elegant handmade centerpiece for dining table decoration.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2800 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products22.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">Ceramic Flower Vase</div>
+<div class="desc">Minimal ceramic vase for flowers and interior style.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">3000 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products23.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">Handmade Dream Catcher</div>
+<div class="desc">Traditional dream catcher with soft handmade details.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">1800 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products24.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">Rustic Wooden Shelf</div>
+<div class="desc">Wall-mounted wooden shelf for decoration and storage.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">4500 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products25.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">LED Decorative Lamp</div>
+<div class="desc">Soft glowing handmade lamp for cozy home lighting.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">3800 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products26.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">Wall Art Frame Set</div>
+<div class="desc">Set of artistic frames for modern interior decoration.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">4200 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products27.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">Handmade Rug Mini</div>
+<div class="desc">Small decorative rug with traditional handmade patterns.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">5000 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="deco1.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">Hanging Plant Holder</div>
+<div class="desc">Macramé plant hanger for indoor green decoration.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">2100 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products28.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">Wooden Photo Frame</div>
+<div class="desc">Simple handmade frame for photos and memories.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">1700 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products29.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">Decorative Table Lamp</div>
+<div class="desc">Modern handmade lamp for bedroom and living room use.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">3900 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="img">
+  <img src="jawlery_products30.jpeg" alt="Handmade decor">
+</div>
+<div class="content">
+<span class="tag">Decor</span>
+<div class="title">Luxury Wall Clock</div>
+<div class="desc">Elegant handmade wall clock with wooden details.</div>
+<div class="artisan">Artisan: ________</div>
+<div class="price">4800 DA</div>
+<div class="buttons">
+<button class="details">View Details</button>
+<button class="cart">Add to Cart</button>
+</div>
+</div>
+</div>
+
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function updateCartText() {
+        let links = document.querySelectorAll('a[href="cart.html"]');
+
+        links.forEach(link => {
+            link.innerText = `Cart (${cart.length})`;
+        });
+    }
+
+    document.querySelectorAll('.card .cart').forEach(btn => {
+        btn.addEventListener('click', function () {
+
+            let card = this.closest('.card');
+
+            let img = card.querySelector('img').src;
+
+            let nameEl = card.querySelector('.titlep') || card.querySelector('h3');
+            let name = nameEl ? nameEl.innerText : "Product";
+
+            let priceText = card.querySelector('.price')
+                ? card.querySelector('.price').innerText
+                : card.querySelector('p').innerText;
+
+            let price = parseInt(priceText.replace(/[^0-9]/g, ''));
+
+            cart.push({
+                name: name,
+                price: price,
+                img: img
+            });
+
+            saveCart();
+            updateCartText();
+        });
+    });
+
+    updateCartText();
+
+});
+</script>
+</body>
+</html>

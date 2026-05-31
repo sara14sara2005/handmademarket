@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handmade Embroidery Shop</title>
+
+<style>
+
+/* GLOBAL */
+body{
+    margin:0;
+    font-family: 'Arial';
+    background:#f4f4f4;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:30px;
+    background: linear-gradient(135deg,#8b5e3c,#f6b26b);
+    color:white;
+}
+
+.header h1{
+    margin:0;
+    font-size:32px;
+}
+
+/* GRID */
+.container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* MEDIA */
+.card img,
+.card video{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    background:#ddd;
+}
+
+/* PLACEHOLDER */
+.placeholder{
+    width:100%;
+    height:200px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: repeating-linear-gradient(
+        45deg,
+        #eee,
+        #eee 10px,
+        #f9f9f9 10px,
+        #f9f9f9 20px
+    );
+    color:#888;
+    font-size:14px;
+}
+.details{
+    flex:1;
+    padding:8px;
+    border-radius:6px;
+    background:#ddd;
+    text-decoration:none;
+    color:black;
+    text-align:center;
+    font-size:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.details:hover{
+    background:#ccc;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* CONTENT */
+.content{
+    padding:15px;
+}
+
+.tag{
+    font-size:12px;
+    background:#8b5e3c;
+    color:white;
+    padding:4px 8px;
+    border-radius:5px;
+    display:inline-block;
+}
+
+.title{
+    margin:10px 0 5px;
+    font-size:18px;
+}
+
+.desc{
+    font-size:13px;
+    color:#555;
+    min-height:40px;
+}
+
+.price{
+    color:#8b5e3c;
+    font-weight:bold;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    margin-top:10px;
+    padding:10px;
+    border:none;
+    background:#8b5e3c;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#6e452c;
+}
+
+</style>
+</head>
+
+<body>
+<header style="display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:white;">
+    <h2>Handmade Embroidery</h2>
+
+    <div>
+        <a href="projet.html">Home</a>
+        <a href="cart.html" style="margin-left:15px;">Cart</a>
+    </div>
+</header>
+
+
+<div class="container">
+
+    <!-- 1 VIDEO REAL -->
+    <div class="card">
+
+            <div class="placeholder">
+  <img src="embroidery_products1.jpeg" alt="Product Image">
+</div>
+
+        <div class="content">
+            <span class="tag">Featured</span>
+            <div class="title">Embroidery Masterpiece 1</div>
+            <div class="desc">Hand-stitched premium embroidery with traditional patterns and fine thread details.</div>
+            <div class="price">2000 DA</div>
+        <div class="buttons">
+            <a href="artisan6.html" class="details">View Details</a>
+            <button class="cart">Add to Cart</button>
+    </div>
+
+            
+        </div>
+    </div>
+
+    <!-- 11 PLACEHOLDER PRODUCTS -->
+
+    <div class="card">
+        <div class="placeholder">
+  <img src="embroidery_products2.jpeg" alt="Product Image">
+</div>
+        <div class="content">
+            <span class="tag">Embroidery</span>
+            <div class="title">Floral Pattern Art</div>
+            <div class="desc">Elegant handmade floral embroidery inspired by nature designs.</div>
+            <div class="price">1800 DA</div>
+            <a href="artisan6.html" class="details">View Details</a>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+                    <div class="placeholder">
+  <img src="embroidery_products3.jpeg" alt="Product Image">
+</div>
+        <div class="content">
+            <span class="tag">Embroidery</span>
+            <div class="title">Traditional Stitch Work</div>
+            <div class="desc">Classic embroidery style with cultural Algerian inspiration.</div>
+            <div class="price">2200 DA</div>
+                    <div class="buttons">
+            <a href="artisan6.html" class="details">View Details</a>
+            <button class="cart">Add to Cart</button>
+    </div>
+        </div>
+    </div>
+
+    <div class="card">
+                    <div class="placeholder">
+  <img src="embroidery_products4.jpeg" alt="Product Image">
+</div>
+        <div class="content">
+            <span class="tag">Embroidery</span>
+            <div class="title">Modern Abstract Design</div>
+            <div class="desc">Minimal modern embroidery with abstract artistic patterns.</div>
+            <div class="price">2500 DA</div>
+                    <div class="buttons">
+            <a href="artisan6.html" class="details">View Details</a>
+            <button class="cart">Add to Cart</button>
+    </div>
+        </div>
+    </div>
+
+    <div class="card">
+                    <div class="placeholder">
+  <img src="embroidery_products5.jpeg" alt="Product Image">
+</div>
+        <div class="content">
+            <span class="tag">Embroidery</span>
+            <div class="title">Golden Thread Art</div>
+            <div class="desc">Luxury embroidery using golden threads and elegant finishing.</div>
+            <div class="price">3000 DA</div>
+                    <div class="buttons">
+            <a href="artisan6.html" class="details">View Details</a>
+            <button class="cart">Add to Cart</button>
+    </div>
+        </div>
+    </div>
+
+    <div class="card">
+                    <div class="placeholder">
+  <img src="embroidery_products6.jpeg" alt="Product Image">
+</div>
+        <div class="content">
+            <span class="tag">Embroidery</span>
+            <div class="title">Minimal Line Stitch</div>
+            <div class="desc">Simple clean embroidery design with modern aesthetic style.</div>
+            <div class="price">1600 DA</div>
+                    <div class="buttons">
+            <a href="artisan6.html" class="details">View Details</a>
+            <button class="cart">Add to Cart</button>
+    </div>
+        </div>
+    </div>
+
+    <div class="card">
+                   <div class="placeholder">
+  <img src="embroidery_products7.jpeg" alt="Product Image">
+</div>
+        <div class="content">
+            <span class="tag">Embroidery</span>
+            <div class="title">Color Mix Pattern</div>
+            <div class="desc">Vibrant embroidery combining multiple colors in harmony.</div>
+            <div class="price">2100 DA</div>
+                    <div class="buttons">
+            <a href="artisan6.html" class="details">View Details</a>
+            <button class="cart">Add to Cart</button>
+    </div>
+        </div>
+    </div>
+
+    <div class="card">
+                    <div class="placeholder">
+  <img src="embroidery_products8.jpeg" alt="Product Image">
+</div>
+        <div class="content">
+            <span class="tag">Embroidery</span>
+            <div class="title">Vintage Style Art</div>
+            <div class="desc">Old-school embroidery inspired by traditional handmade crafts.</div>
+            <div class="price">2300 DA</div>
+                    <div class="buttons">
+            <a href="artisan6.html" class="details">View Details</a>
+            <button class="cart">Add to Cart</button>
+    </div>
+        </div>
+    </div>
+
+    <div class="card">
+                   <div class="placeholder">
+  <img src="embroidery_products9.jpeg" alt="Product Image">
+</div>
+        <div class="content">
+            <span class="tag">Embroidery</span>
+            <div class="title">Nature Inspired Design</div>
+            <div class="desc">Embroidery inspired by leaves, flowers and natural elements.</div>
+            <div class="price">1900 DA</div>
+                    <div class="buttons">
+            <a href="artisan6.html" class="details">View Details</a>
+            <button class="cart">Add to Cart</button>
+    </div>
+        </div>
+    </div>
+
+    <div class="card">
+                   <div class="placeholder">
+  <img src="embroidery_products10.jpeg" alt="Product Image">
+</div>
+        <div class="content">
+            <span class="tag">Embroidery</span>
+            <div class="title">Luxury Wall Art</div>
+            <div class="desc">High-end embroidery piece designed for wall decoration.</div>
+            <div class="price">3500 DA</div>
+                    <div class="buttons">
+            <a href="artisan6.html" class="details">View Details</a>
+            <button class="cart">Add to Cart</button>
+    </div>
+        </div>
+    </div>
+
+    <div class="card">
+                    <div class="placeholder">
+  <img src="embroidery_products11.jpeg" alt="Product Image">
+</div>
+        <div class="content">
+            <span class="tag">Embroidery</span>
+            <div class="title">Soft Pastel Stitch</div>
+            <div class="desc">Soft color embroidery with calm pastel tones and harmony.</div>
+            <div class="price">1700 DA</div>
+                    <div class="buttons">
+            <a href="artisan6.html" class="details">View Details</a>
+            <button class="cart">Add to Cart</button>
+    </div>
+        </div>
+    </div>
+
+    <div class="card">
+                    <div class="placeholder">
+  <img src="embroidery_products12.jpeg" alt="Product Image">
+</div>
+        <div class="content">
+            <span class="tag">Embroidery</span>
+            <div class="title">Custom Name Embroidery</div>
+            <div class="desc">Personalized embroidery where you can add your own name or text.</div>
+            <div class="price">2600 DA</div>
+                    <div class="buttons">
+            <a href="artisan6.html" class="details">View Details</a>
+            <button class="cart">Add to Cart</button>
+    </div>
+        </div>
+    </div>
+
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function updateCartText() {
+        let links = document.querySelectorAll('a[href="cart.html"]');
+
+        links.forEach(link => {
+            link.innerText = `Cart (${cart.length})`;
+        });
+    }
+
+    document.querySelectorAll('.card .cart').forEach(btn => {
+        btn.addEventListener('click', function () {
+
+            let card = this.closest('.card');
+
+            let img = card.querySelector('img').src;
+
+            let nameEl = card.querySelector('.titlep') || card.querySelector('h3');
+            let name = nameEl ? nameEl.innerText : "Product";
+
+            let priceText = card.querySelector('.price')
+                ? card.querySelector('.price').innerText
+                : card.querySelector('p').innerText;
+
+            let price = parseInt(priceText.replace(/[^0-9]/g, ''));
+
+            cart.push({
+                name: name,
+                price: price,
+                img: img
+            });
+
+            saveCart();
+            updateCartText();
+        });
+    });
+
+    updateCartText();
+
+});
+</script>
+</body>
+</html>

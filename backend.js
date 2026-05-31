@@ -68,8 +68,12 @@ app.get("/orders", async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+const path = require("path");
+
+app.use(express.static("public"));
+
 app.get("/", (req, res) => {
-    res.send("Handmade Market API is running 🚀");
+    res.sendFile(path.join(__dirname, "public", "project.html"));
 });
 
 /* 🏁 Start Server */

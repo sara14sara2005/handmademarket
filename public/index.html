@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome - Hand Made Market</title>
+<title>Hand Made Market</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
 
@@ -12,110 +12,272 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    height: 100vh;
+    background: #f5efe6;
+    color: #4a3f35;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #4a3f35;
+}
+
+.cart-btn {
+    background: #c27c59;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("images/photo2.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("photo1.jpg") center/cover no-repeat;
-    position: relative;
-    color: white;
+    overflow: hidden;
 }
 
-/* OVERLAY */
-.overlay {
+.hero-overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
 }
 
-/* CONTENT */
-.content {
+.hero-content {
     position: relative;
-    text-align: center;
-    z-index: 1;
-    animation: fadeIn 2s ease-in-out;
-}
-
-/* LOGO IMAGE */
-.logo img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%; /* دائرة */
-    margin-bottom: 20px;
-    border: 3px solid #fff;
-    animation: zoomIn 1.5s ease;
-}
-
-/* TITLE */
-.content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 55px;
-    margin-bottom: 20px;
- 
-}
-
-/* TEXT */
-.content p {
-    font-size: 20px;
-    margin-bottom: 30px;
-    max-width: 600px;
-    color: #ae8f81;
-}
-
-/* BUTTON */
-.content button {
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    background: #8B5E3C;
     color: white;
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeUp 1s ease;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.hero-content button {
+    padding: 12px 25px;
+    background: #c27c59;
+    border: none;
+    color: white;
+    border-radius: 30px;
     cursor: pointer;
-    border-radius: 8px;
     transition: 0.3s;
 }
 
-.content button:hover {
-    background: #6f472d;
+.hero-content button:hover {
+    background: #a86445;
+}
+
+/* PRODUCTS */
+.products {
+    padding: 50px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card, .item {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.card.show, .item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover, .item:hover {
     transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
 }
 
-/* ANIMATIONS */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(-30px); }
-    100% { opacity: 1; transform: translateY(0); }
+.card img, .item img {
+    width: 100%;
+    border-radius: 10px;
 }
 
-@keyframes zoomIn {
-    0% { transform: scale(0.5); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+.price { 
+    font-weight: bold; 
+    margin-top: 10px; 
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 10px;
+    background: #c27c59;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.details { 
+    display: none; 
+    margin-top: 10px; 
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #4a3f35;
+    color: white;
 }
 </style>
 </head>
-
 <body>
 
-<div class="overlay"></div>
-
-<div class="content">
-
-    <!-- 📸 PLACE FOR YOUR LOGO IMAGE -->
-    <div class="logo">
-        <img src="images/photo3.png" alt="logo">
-        <!-- بدل logo.png بالصورة تاعك -->
+<header>
+    <div class="logo-area">
+        <h1>Hand Made Market</h1>
     </div>
 
-    <h1>Hand Made Market</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shoppage.html">Shop</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="cart.html" class="cart-btn">Cart (0)</a>
+    </nav>
+</header>
 
-    <p>
-    Where every handmade piece tells a story of passion, creativity, and tradition,
-    crafted with care to bring warmth, beauty, and authenticity into your everyday life.
-    </p>
+<section class="hero">
+    <div class="hero-overlay"></div>
 
-    <button onclick="window.location.href='index.html'">Enter Home</button>
+    <div class="hero-content">
+        <h2>Handcrafted with Passion</h2>
+        <p>Discover unique handmade creations made with love</p>
 
-</div>
+        <button onclick="window.location.href='shoppage.html'">
+            Shop Now
+        </button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Handmade Market</p>
+</footer>
+
+<script>
+// ===== DETAILS =====
+function toggleDetails(btn){
+    let d = btn.nextElementSibling.nextElementSibling;
+
+    if(d.style.display==="block"){
+        d.style.display="none";
+        btn.innerText="Details";
+    } 
+    else {
+        d.style.display="block";
+        btn.innerText="Hide Details";
+    }
+}
+
+// ===== CART =====
+function addToCart(btn){
+
+    let card = btn.closest('.card') || btn.closest('.item');
+
+    let name = card.querySelector('h3').innerText;
+
+    let price = parseFloat(
+        card.querySelector('.price').innerText.replace('$','')
+    );
+
+    let img = card.querySelector('img').src;
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    cart.push({name,price,img});
+
+    localStorage.setItem('cart',JSON.stringify(cart));
+
+    updateCartCount();
+
+    alert(`${name} added to cart!`);
+}
+
+function updateCartCount(){
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    let btn = document.querySelector('.cart-btn');
+
+    btn.innerText = `Cart (${cart.length})`;
+}
+
+// ===== ANIMATION =====
+function animateProducts(){
+
+    let products = document.querySelectorAll('.card, .item');
+
+    products.forEach((p,i)=>{
+
+        setTimeout(()=>{
+            p.classList.add('show');
+        }, i*150);
+
+    });
+}
+
+// ===== INITIAL =====
+window.addEventListener('load', ()=>{
+
+    animateProducts();
+
+    updateCartCount();
+
+});
+</script>
 
 </body>
 </html>

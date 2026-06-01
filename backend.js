@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
- // يخدم كل ملفات html + images
+ app.use(express.static("public"));// يخدم كل ملفات html + images
 
 /* ================= MONGODB ================= */
 mongoose.connect("mongodb+srv://sara14sara2005_db_user:sarrasarra@cluster0.bf9frcj.mongodb.net/project_takharoj")

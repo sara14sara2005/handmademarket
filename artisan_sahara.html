@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amar Touareg Artisan</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#f6b26b,#8b5e3c);
+}
+
+.header{
+    text-align:center;
+    padding:25px;
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.profile{
+    max-width:900px;
+    margin:20px auto;
+    background:white;
+    border-radius:16px;
+    padding:25px;
+    display:flex;
+    gap:20px;
+    align-items:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.profile-img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #c27c59;
+    background:#ddd;
+}
+
+.info{
+    flex:1;
+}
+
+.info h2{
+    margin:0;
+    color:#333;
+}
+
+.arabic{
+    color:#8b5e3c;
+    font-size:18px;
+    margin-top:5px;
+}
+
+.desc{
+    color:#555;
+    margin:12px 0;
+    line-height:1.6;
+}
+
+.badge{
+    display:inline-block;
+    background:#c27c59;
+    color:white;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+.location{
+    margin-top:12px;
+    color:#444;
+}
+
+.contact{
+    margin-top:15px;
+}
+
+.contact a{
+    display:inline-block;
+    margin-right:10px;
+    background:#8b5e3c;
+    color:white;
+    padding:10px 14px;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.contact a:hover{
+    background:#6f482d;
+}
+
+.map iframe{
+    width:100%;
+    height:180px;
+    border:none;
+    border-radius:12px;
+    margin-top:15px;
+}
+
+.container{
+    max-width:1100px;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:10px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    background:#ddd;
+}
+
+.content{
+    padding:12px;
+    text-align:center;
+}
+
+.title{
+    font-weight:bold;
+    font-size:18px;
+}
+
+.price{
+    color:#8b5e3c;
+    font-weight:bold;
+    margin:8px 0;
+    font-size:17px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#c27c59;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+button:hover{
+    background:#a9653f;
+}
+
+@media(max-width:900px){
+
+    .profile{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:500px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+<header style="display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:white;">
+    <h2>Artisan Profile</h2>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="cart.html" style="margin-left:15px;">Cart</a>
+    </div>
+</header>
+<div class="profile">
+
+    <img src="sss1.jpg" class="profile-img" alt="Amar Touareg">
+
+    <div class="info">
+
+        <h2>AMAR TOUAREG</h2>
+
+        <div class="arabic">
+            عمار الطوارقي
+        </div>
+
+        <div class="desc">
+            Traditional Tuareg jewelry artisan from Tamanrasset.
+            Specialized in handmade silver jewelry and Saharan accessories.
+        </div>
+
+        <div class="badge">
+            Jewelry Artisan
+        </div>
+
+        <div class="location">
+            📍 Tamanrasset, Algeria
+        </div>
+
+        <div class="contact">
+            <a href="tel:+213555123456">📞 Call</a>
+            <a href="https://wa.me/213555123456" target="_blank">💬 WhatsApp</a>
+        </div>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps?q=Tamanrasset+Algeria&output=embed"></iframe>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <img src="sss2.jpg" alt="Silver Necklace">
+        <div class="content">
+            <div class="title">Silver Necklace</div>
+            <div class="price">6000 DA</div>
+            <button onclick="addToCart('Silver Necklace',6000)">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="sss3.jpg" alt="Tuareg Ring">
+        <div class="content">
+            <div class="title">Tuareg Ring</div>
+            <div class="price">3500 DA</div>
+            <button onclick="addToCart('Tuareg Ring',3500)">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="sss4.jpg" alt="Traditional Bracelet">
+        <div class="content">
+            <div class="title">Traditional Bracelet</div>
+            <div class="price">4500 DA</div>
+            <button onclick="addToCart('Traditional Bracelet',4500)">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="sss5.jpg" alt="Silver Earrings">
+        <div class="content">
+            <div class="title">Silver Earrings</div>
+            <div class="price">3000 DA</div>
+            <button onclick="addToCart('Silver Earrings',3000)">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCart(name, price, img){
+
+    let product = {
+        name: name,
+        price: price,
+        img: img
+    };
+
+    cart.push(product);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(name + " added to cart!");
+}
+
+</script>
+
+
+
+</body>
+</html>

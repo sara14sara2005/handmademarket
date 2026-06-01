@@ -7,14 +7,14 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
- app.use(express.static("public"));// يخدم كل ملفات html + images
+app.use(express.static("public")); // 👈 مهم للصور و html
 
 /* ================= MONGODB ================= */
 mongoose.connect("mongodb+srv://sara14sara2005_db_user:sarrasarra@cluster0.bf9frcj.mongodb.net/project_takharoj")
 .then(() => console.log("MongoDB Connected ✅"))
 .catch(err => console.log("MongoDB Error ❌", err));
 
-/* ================= ORDER ================= */
+/* ================= ORDER SCHEMA ================= */
 const orderSchema = new mongoose.Schema({
     name: String,
     phone: String,
@@ -22,14 +22,18 @@ const orderSchema = new mongoose.Schema({
     delivery: String,
     cart: Array,
     total: Number,
+    details: String,   // 👈 description تاع المنتج
     createdAt: { type: Date, default: Date.now }
 });
 
 const Order = mongoose.model("Order", orderSchema);
 
+/* ================= ORDER API ================= */
 app.post("/order", async (req, res) => {
     try {
         const data = req.body;
+
+        console.log("ORDER RECEIVED:", data);
 
         let total = 0;
 
@@ -45,7 +49,8 @@ app.post("/order", async (req, res) => {
             wilaya: data.wilaya || "",
             delivery: data.delivery || "",
             cart: data.cart || [],
-            total
+            total: total,
+            details: data.details || ""   // 👈 مهم
         });
 
         await newOrder.save();
@@ -54,11 +59,11 @@ app.post("/order", async (req, res) => {
 
     } catch (err) {
         console.log("ORDER ERROR ❌", err);
-        res.status(500).json({ success: false });
+        res.status(500).json({ success: false, error: err.message });
     }
 });
 
-/* ================= ARTISAN ================= */
+/* ================= ARTISAN SCHEMA ================= */
 const artisanSchema = new mongoose.Schema({
     name: String,
     email: String,
@@ -69,6 +74,7 @@ const artisanSchema = new mongoose.Schema({
 
 const ArtisanMessage = mongoose.model("ArtisanMessage", artisanSchema);
 
+/* ================= ARTISAN API ================= */
 app.post("/contact-artisan", async (req, res) => {
     try {
         const data = req.body;

@@ -104,7 +104,7 @@ app.get("/orders", async (req, res) => {
 
 /* ================= HOME PAGE ================= */
 app.get("/", (req, res) => {
-    res.send("SERVER WORKING ✅");
+    res.sendFile(path.join(__dirname, "public", "welcomepage.html"));
 });
 
 /* ================= START SERVER ================= */

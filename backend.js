@@ -7,14 +7,14 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static("public")); // يخدم كل ملفات html + images
 
-/* 🔗 MongoDB connection */
+/* ================= MONGODB ================= */
 mongoose.connect("mongodb+srv://sara14sara2005_db_user:sarrasarra@cluster0.bf9frcj.mongodb.net/project_takharoj")
 .then(() => console.log("MongoDB Connected ✅"))
 .catch(err => console.log("MongoDB Error ❌", err));
 
-/* 📦 Schema */
+/* ================= ORDER ================= */
 const orderSchema = new mongoose.Schema({
     name: String,
     phone: String,
@@ -27,12 +27,9 @@ const orderSchema = new mongoose.Schema({
 
 const Order = mongoose.model("Order", orderSchema);
 
-/* 🟢 ORDER API */
 app.post("/order", async (req, res) => {
     try {
         const data = req.body;
-
-        console.log("ORDER RECEIVED:", data);
 
         let total = 0;
 
@@ -48,7 +45,7 @@ app.post("/order", async (req, res) => {
             wilaya: data.wilaya || "",
             delivery: data.delivery || "",
             cart: data.cart || [],
-            total: total
+            total
         });
 
         await newOrder.save();
@@ -57,9 +54,11 @@ app.post("/order", async (req, res) => {
 
     } catch (err) {
         console.log("ORDER ERROR ❌", err);
-        res.status(500).json({ success: false, error: err.message });
+        res.status(500).json({ success: false });
     }
 });
+
+/* ================= ARTISAN ================= */
 const artisanSchema = new mongoose.Schema({
     name: String,
     email: String,
@@ -69,6 +68,7 @@ const artisanSchema = new mongoose.Schema({
 });
 
 const ArtisanMessage = mongoose.model("ArtisanMessage", artisanSchema);
+
 app.post("/contact-artisan", async (req, res) => {
     try {
         const data = req.body;
@@ -82,7 +82,7 @@ app.post("/contact-artisan", async (req, res) => {
 
         await newMsg.save();
 
-        console.log("SAVED ARTISAN MESSAGE ✅");
+        console.log("ARTISAN MESSAGE SAVED ✅");
 
         res.json({ success: true });
 
@@ -91,7 +91,8 @@ app.post("/contact-artisan", async (req, res) => {
         res.status(500).json({ success: false });
     }
 });
-/* 📊 GET ORDERS */
+
+/* ================= GET ORDERS ================= */
 app.get("/orders", async (req, res) => {
     try {
         const orders = await Order.find();
@@ -101,14 +102,14 @@ app.get("/orders", async (req, res) => {
     }
 });
 
-/* 🏠 ROOT PAGE */
+/* ================= HOME PAGE ================= */
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "welcomepage.html"));
 });
 
-/* 🚀 START SERVER */
+/* ================= START SERVER ================= */
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log("Server running 🚀");
+    console.log("Server running 🚀 on port " + PORT);
 });

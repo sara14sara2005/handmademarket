@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.static("public")); // 👈 مهم للصور و html
 
 /* ================= MONGODB ================= */
-mongoose.connect("mongodb+srv://sara14sara2005_db_user:sarrasarra@cluster0.bf9frcj.mongodb.net/project_takharoj")
+mongoose.connect("mongodb+srv://sara14sara2005_db_user:sarra@cluster0.bf9frcj.mongodb.net/project_takharoj")
 .then(() => console.log("MongoDB Connected ✅"))
 .catch(err => console.log("MongoDB Error ❌", err));
 
